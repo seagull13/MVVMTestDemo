@@ -8,17 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "YYText.h"
-#import "YYModel.h"
-#import "GZLStandStructureBaseCellProtocol.h"
+
+
 #import "GZLStandStructureBaseViewProtocol.h"
-#import "GZLStandStructureBaseView.h"
 #import "GZLStandStructureBaseCellModel.h"
-@class GZLStandStructureBaseView;
-@interface GZLStandStructureBaseCell : UITableViewCell  <GZLStandStructureBaseCellProtocol>
+
+@interface GZLStandStructureBaseCell : UITableViewCell  <GZLStandStructureBaseViewProtocol>
 @property (weak, nonatomic) id<GZLStandStructureBaseViewProtocol> delegate;
-/** 下标 */
-@property(nonatomic,strong)NSIndexPath  *indexPath;
 /**
  标记位
  @return  标记位
@@ -46,5 +42,7 @@
 - (void)resetData;
 /** baseModel */
 @property(nonatomic,strong)GZLStandStructureBaseCellModel  *baseModel;
+/** 下标 */
+@property(nonatomic,strong)NSIndexPath  *indexPath;
 @end
 

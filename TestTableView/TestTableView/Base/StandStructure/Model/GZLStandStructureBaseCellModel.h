@@ -6,9 +6,9 @@
 // GZL INTERNATIONAL TRAVEL SERVICE  LTD.
 //
 
+#import <Foundation/Foundation.h>
 
-
-@interface GZLStandStructureBaseCellModel : GZLYYBaseModel
+@interface GZLStandStructureBaseCellModel : NSObject
 
 /** 基础模型 */
 @property(nonatomic,strong)id  baseModel;
@@ -31,9 +31,9 @@
 /**是否自动计算行高  */
 @property(nonatomic,assign)BOOL  isCacheCellHeight;
 /** foot 高度(假定没有头部,距离顶部有点间距 尾部类似 例如距离  是10)*/
-@property(nonatomic,assign) CGFloat  footBaseSectionHeight;
+@property(nonatomic,assign) float  footBaseSectionHeight;
 /**head 高度(假定没有头部,距离顶部有点间距 尾部类似 例如距离  是10) */
-@property(nonatomic,assign) CGFloat  headBaseSectionHeight;
+@property(nonatomic,assign) float  headBaseSectionHeight;
 /** 是否同一个组有多个不同的cell*/
 @property(nonatomic,assign) BOOL  multipleDifferentCells;
 /** 同一个组有不同的cell   不同cell 的数组 */

@@ -11,8 +11,6 @@
 
 
 @interface  GZLStandStructureBaseCell()
-///** indexPath */
-//@property(nonatomic,strong)NSIndexPath  *indexPath;
 @end
 
 #pragma clang diagnostic push
@@ -50,8 +48,6 @@
 
 - (void)dealloc {
     [self resignNotification];
-  
-    
 }
 
 - (void)resetData {

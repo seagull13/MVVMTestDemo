@@ -15,6 +15,12 @@
 		2866D0942226862900A69E83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0932226862900A69E83 /* main.m */; };
 		2866D09E2226862900A69E83 /* TestTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D09D2226862900A69E83 /* TestTableViewTests.m */; };
 		2866D0A92226862900A69E83 /* TestTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0A82226862900A69E83 /* TestTableViewUITests.m */; };
+		2866D0C6222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0BA222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m */; };
+		2866D0C7222686DA00A69E83 /* GZLStandStructureBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0BF222686DA00A69E83 /* GZLStandStructureBaseCell.m */; };
+		2866D0C8222686DA00A69E83 /* GZLStandStructureBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0C1222686DA00A69E83 /* GZLStandStructureBaseCellModel.m */; };
+		2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0C5222686DA00A69E83 /* GZLStandStructureBaseView.m */; };
+		2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0CB22268AF200A69E83 /* TextStandCell.m */; };
+		2866D0CF22268B4F00A69E83 /* TextStandCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,19 @@
 		2866D0A42226862900A69E83 /* TestTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2866D0A82226862900A69E83 /* TestTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewUITests.m; sourceTree = "<group>"; };
 		2866D0AA2226862900A69E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2866D0BA222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLStandStructureBaseHeadAndFootView.m; sourceTree = "<group>"; };
+		2866D0BB222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLStandStructureBaseHeadAndFootView.h; sourceTree = "<group>"; };
+		2866D0BC222686DA00A69E83 /* GZLStandStructureBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLStandStructureBaseCell.h; sourceTree = "<group>"; };
+		2866D0BE222686DA00A69E83 /* GZLStandStructureBaseViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLStandStructureBaseViewProtocol.h; sourceTree = "<group>"; };
+		2866D0BF222686DA00A69E83 /* GZLStandStructureBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLStandStructureBaseCell.m; sourceTree = "<group>"; };
+		2866D0C1222686DA00A69E83 /* GZLStandStructureBaseCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLStandStructureBaseCellModel.m; sourceTree = "<group>"; };
+		2866D0C2222686DA00A69E83 /* GZLStandStructureBaseCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLStandStructureBaseCellModel.h; sourceTree = "<group>"; };
+		2866D0C4222686DA00A69E83 /* GZLStandStructureBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLStandStructureBaseView.h; sourceTree = "<group>"; };
+		2866D0C5222686DA00A69E83 /* GZLStandStructureBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLStandStructureBaseView.m; sourceTree = "<group>"; };
+		2866D0CA22268AF200A69E83 /* TextStandCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextStandCell.h; sourceTree = "<group>"; };
+		2866D0CB22268AF200A69E83 /* TextStandCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStandCell.m; sourceTree = "<group>"; };
+		2866D0CD22268B4F00A69E83 /* TextStandCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextStandCellModel.h; sourceTree = "<group>"; };
+		2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStandCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +120,15 @@
 		2866D0832226862600A69E83 /* TestTableView */ = {
 			isa = PBXGroup;
 			children = (
+				2866D0B6222686DA00A69E83 /* Base */,
 				2866D0842226862600A69E83 /* AppDelegate.h */,
 				2866D0852226862600A69E83 /* AppDelegate.m */,
 				2866D0872226862600A69E83 /* ViewController.h */,
 				2866D0882226862600A69E83 /* ViewController.m */,
+				2866D0CA22268AF200A69E83 /* TextStandCell.h */,
+				2866D0CB22268AF200A69E83 /* TextStandCell.m */,
+				2866D0CD22268B4F00A69E83 /* TextStandCellModel.h */,
+				2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */,
 				2866D08A2226862600A69E83 /* Main.storyboard */,
 				2866D08D2226862900A69E83 /* Assets.xcassets */,
 				2866D08F2226862900A69E83 /* LaunchScreen.storyboard */,
@@ -130,6 +154,70 @@
 				2866D0AA2226862900A69E83 /* Info.plist */,
 			);
 			path = TestTableViewUITests;
+			sourceTree = "<group>";
+		};
+		2866D0B6222686DA00A69E83 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0B7222686DA00A69E83 /* StandStructure */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2866D0B7222686DA00A69E83 /* StandStructure */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0B8222686DA00A69E83 /* BaseCell */,
+				2866D0C0222686DA00A69E83 /* Model */,
+				2866D0C3222686DA00A69E83 /* View */,
+			);
+			path = StandStructure;
+			sourceTree = "<group>";
+		};
+		2866D0B8222686DA00A69E83 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0B9222686DA00A69E83 /* TableHeadAndFootView */,
+				2866D0BC222686DA00A69E83 /* GZLStandStructureBaseCell.h */,
+				2866D0BF222686DA00A69E83 /* GZLStandStructureBaseCell.m */,
+				2866D0BD222686DA00A69E83 /* Protocol */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
+		2866D0B9222686DA00A69E83 /* TableHeadAndFootView */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0BA222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m */,
+				2866D0BB222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.h */,
+			);
+			path = TableHeadAndFootView;
+			sourceTree = "<group>";
+		};
+		2866D0BD222686DA00A69E83 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0BE222686DA00A69E83 /* GZLStandStructureBaseViewProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		2866D0C0222686DA00A69E83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0C1222686DA00A69E83 /* GZLStandStructureBaseCellModel.m */,
+				2866D0C2222686DA00A69E83 /* GZLStandStructureBaseCellModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2866D0C3222686DA00A69E83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0C4222686DA00A69E83 /* GZLStandStructureBaseView.h */,
+				2866D0C5222686DA00A69E83 /* GZLStandStructureBaseView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +350,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2866D0C7222686DA00A69E83 /* GZLStandStructureBaseCell.m in Sources */,
+				2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */,
+				2866D0C6222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m in Sources */,
+				2866D0C8222686DA00A69E83 /* GZLStandStructureBaseCellModel.m in Sources */,
 				2866D0892226862600A69E83 /* ViewController.m in Sources */,
+				2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */,
 				2866D0942226862900A69E83 /* main.m in Sources */,
 				2866D0862226862600A69E83 /* AppDelegate.m in Sources */,
+				2866D0CF22268B4F00A69E83 /* TextStandCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
