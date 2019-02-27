@@ -42,7 +42,6 @@
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
-    
 }
 
 + (NSString *)cellReuseIdentifier {
@@ -70,7 +69,8 @@
 -(void)dealDataWithDataModel:(id)tempDataModel{
   if ([tempDataModel isKindOfClass:TextStandCellModel.class]) {
     TextStandCellModel  *cellModel  = tempDataModel;
-    self.textLabel.text = [NSString stringWithFormat:@"姓名: %@ \n 身高: %.2f,体重: %.2f",cellModel.name,cellModel.height,cellModel.weight];
+    self.textLabel.text = [NSString stringWithFormat:@"姓名: %@ \n身高: %.2f,体重: %.2f",cellModel.name,cellModel.height,cellModel.weight];
+    self.textLabel.numberOfLines = 0;
     self.textLabel.textColor = cellModel.textColor;
   }
 }
