@@ -1,0 +1,41 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SwfitDemo' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+pod 'SCLAlertView' #弹窗
+pod 'Kingfisher' #图片缓存
+pod 'Alamofire', '~> 5.0.0-beta.2' #网络请求
+pod 'SwiftyJSON', '~> 4.0' #数据解析
+pod 'SnapKit', '~> 4.0.0' #布局管理
+pod 'PromiseKit/MapKit'          # MKDirections().calculate().then { /*…*/ }
+pod 'PromiseKit/CoreLocation'    # CLLocationManager.requestLocation().then { /*…*/ }
+pod 'ESTabBarController-swift'
+#pod 'RAMAnimatedTabBarController' #框架管理
+pod 'FoldingCell' #cell 折叠
+pod 'Eureka' #表单
+pod 'NVActivityIndicatorView' #转菊花
+pod 'SkeletonView' #骨架屏
+pod 'JTAppleCalendar', '~> 7.0' #日历
+pod 'TextFieldEffects' #文本输入框
+pod 'ViewAnimator' #view 动画
+pod 'FSPagerView' #轮播图
+#pod 'SwiftOCR' #图片识别
+pod 'SwiftyUserDefaults', '4.0.0-alpha.3' #默认数据 userDefault
+pod 'EFQRCode', '~> 4.5.0' #二维码
+pod 'XLPagerTabStrip', '~> 8.1'
+  # Pods for SwfitDemo
+
+  target 'SwfitDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SwfitDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

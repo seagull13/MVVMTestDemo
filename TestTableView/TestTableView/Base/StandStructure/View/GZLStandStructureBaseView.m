@@ -120,8 +120,8 @@ id (*objc_gZLStandStructureBaseViewMsgSendCreateBaseHeadAndFootViewWithSection)(
   }else{
     cellClazz = NSClassFromString(model.containerCellClass);
   }
-  //3.取出cell标识符
-  NSString *identifier = objc_gZLStandStructureBaseViewMsgSendGetCellIdentifier(cellClazz, NSSelectorFromString(@"cellReuseIdentifier"));
+  //3.取出cell标识符//NSSelectorFromString(@"cellReuseIdentifier")
+  NSString *identifier = objc_gZLStandStructureBaseViewMsgSendGetCellIdentifier(cellClazz, @selector(cellReuseIdentifier));
   identifier = [NSString stringWithFormat:@"%@-%2ld-%2ld",identifier,(long)indexPath.section,(long)indexPath.row];
 
   GZLStandStructureBaseCell *cell = [self.templateCellDict objectForKey:identifier];

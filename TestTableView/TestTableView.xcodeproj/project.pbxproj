@@ -188,8 +188,8 @@
 		2866D0B9222686DA00A69E83 /* TableHeadAndFootView */ = {
 			isa = PBXGroup;
 			children = (
-				2866D0BA222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m */,
 				2866D0BB222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.h */,
+				2866D0BA222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m */,
 			);
 			path = TableHeadAndFootView;
 			sourceTree = "<group>";

@@ -1,0 +1,95 @@
+PODS:
+  - Alamofire (5.0.0-beta.2)
+  - EFQRCode (4.5.0):
+    - swift_qrcodejs (~> 1.0.1)
+  - ESTabBarController-swift (2.6.4)
+  - Eureka (4.3.1)
+  - FoldingCell (4.0.2)
+  - FSPagerView (0.8.2)
+  - JTAppleCalendar (7.1.6)
+  - Kingfisher (5.1.1)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - PromiseKit/CoreLocation (6.8.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.8.3)
+  - PromiseKit/MapKit (6.8.3):
+    - PromiseKit/CorePromise
+  - SCLAlertView (0.8)
+  - SkeletonView (1.4.1)
+  - SnapKit (4.0.1)
+  - swift_qrcodejs (1.0.1)
+  - SwiftyJSON (4.2.0)
+  - SwiftyUserDefaults (4.0.0-alpha.3)
+  - TextFieldEffects (1.5.1)
+  - ViewAnimator (2.2.2)
+  - XLPagerTabStrip (8.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.2)
+  - EFQRCode (~> 4.5.0)
+  - ESTabBarController-swift
+  - Eureka
+  - FoldingCell
+  - FSPagerView
+  - JTAppleCalendar (~> 7.0)
+  - Kingfisher
+  - NVActivityIndicatorView
+  - PromiseKit/CoreLocation
+  - PromiseKit/MapKit
+  - SCLAlertView
+  - SkeletonView
+  - SnapKit (~> 4.0.0)
+  - SwiftyJSON (~> 4.0)
+  - SwiftyUserDefaults (= 4.0.0-alpha.3)
+  - TextFieldEffects
+  - ViewAnimator
+  - XLPagerTabStrip (~> 8.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - EFQRCode
+    - ESTabBarController-swift
+    - Eureka
+    - FoldingCell
+    - FSPagerView
+    - JTAppleCalendar
+    - Kingfisher
+    - NVActivityIndicatorView
+    - PromiseKit
+    - SCLAlertView
+    - SkeletonView
+    - SnapKit
+    - swift_qrcodejs
+    - SwiftyJSON
+    - SwiftyUserDefaults
+    - TextFieldEffects
+    - ViewAnimator
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  Alamofire: d1e5493588babe3e7b56ae29e8032942f4de09fe
+  EFQRCode: 842f431e660da841f518993af8f4cbd275601d84
+  ESTabBarController-swift: 58cca4ab7de980657d99a02181c1ff310983e975
+  Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  FoldingCell: 352f0211a53f957b885a1b37d5ffa875da90bca5
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
+  Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  swift_qrcodejs: c181fe5c849d30c699546a23762d7e3dd143ab37
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwiftyUserDefaults: 9d0e41e07dca2a375189d902165c6e90c64eb2e8
+  TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
+  ViewAnimator: 6eaa112663b6a2d9e6b2573df65b416dd051cbe4
+  XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
+
+PODFILE CHECKSUM: 2e6d7073b4eccf217df73ae18febd608a4579f3d
+
+COCOAPODS: 1.5.3
