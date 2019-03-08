@@ -10,6 +10,7 @@
 #import "GZLStandStructureBaseView.h"
 #import "TextStandCellModel.h"
 #import "GZLStandStructureBaseCellModel.h"
+#import "MsgSendFactory.h"
 @interface ViewController ()
 
 /** tableView */
@@ -21,7 +22,19 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self creatTableViewData];
+  [self testFactory];
   // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+-(void)testFactory{
+
+  [[MsgSendFactory creatMsgSendWithType:MsgSendTypeDefault] send];
+  [[MsgSendFactory creatMsgSendWithType:MsgSendTypeMail] send];
+  [[MsgSendFactory creatMsgSendWithType:MsgSendTypeSms] send];
+  [[MsgSendFactory creatMsgSendWithType:MsgSendTypePush] send];
+
+
 }
 
 -(void)creatTableViewData{
