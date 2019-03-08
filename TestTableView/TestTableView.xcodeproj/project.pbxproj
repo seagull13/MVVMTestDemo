@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2855974E223260B6007FBC66 /* MsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2855974D223260B6007FBC66 /* MsgSend.m */; };
+		285597512232637C007FBC66 /* MailMsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 285597502232637C007FBC66 /* MailMsgSend.m */; };
+		2855975A22326636007FBC66 /* MsgSendFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2855975922326636007FBC66 /* MsgSendFactory.m */; };
+		2855975D22326ACE007FBC66 /* SmsMsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2855975C22326ACE007FBC66 /* SmsMsgSend.m */; };
+		2855976022326B7D007FBC66 /* PushMsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2855975F22326B7D007FBC66 /* PushMsgSend.m */; };
 		2866D0862226862600A69E83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0852226862600A69E83 /* AppDelegate.m */; };
 		2866D0892226862600A69E83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0882226862600A69E83 /* ViewController.m */; };
 		2866D08C2226862600A69E83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2866D08A2226862600A69E83 /* Main.storyboard */; };
@@ -41,6 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2855974C223260B6007FBC66 /* MsgSend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MsgSend.h; sourceTree = "<group>"; };
+		2855974D223260B6007FBC66 /* MsgSend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgSend.m; sourceTree = "<group>"; };
+		2855974F2232637C007FBC66 /* MailMsgSend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailMsgSend.h; sourceTree = "<group>"; };
+		285597502232637C007FBC66 /* MailMsgSend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailMsgSend.m; sourceTree = "<group>"; };
+		2855975822326636007FBC66 /* MsgSendFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MsgSendFactory.h; sourceTree = "<group>"; };
+		2855975922326636007FBC66 /* MsgSendFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgSendFactory.m; sourceTree = "<group>"; };
+		2855975B22326ACE007FBC66 /* SmsMsgSend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmsMsgSend.h; sourceTree = "<group>"; };
+		2855975C22326ACE007FBC66 /* SmsMsgSend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmsMsgSend.m; sourceTree = "<group>"; };
+		2855975E22326B7D007FBC66 /* PushMsgSend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushMsgSend.h; sourceTree = "<group>"; };
+		2855975F22326B7D007FBC66 /* PushMsgSend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushMsgSend.m; sourceTree = "<group>"; };
 		2866D0812226862600A69E83 /* TestTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2866D0842226862600A69E83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2866D0852226862600A69E83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +112,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		285597492232521E007FBC66 /* StandBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				2866D0CA22268AF200A69E83 /* TextStandCell.h */,
+				2866D0CB22268AF200A69E83 /* TextStandCell.m */,
+				2866D0CD22268B4F00A69E83 /* TextStandCellModel.h */,
+				2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */,
+			);
+			path = StandBaseView;
+			sourceTree = "<group>";
+		};
+		2855974A22325244007FBC66 /* 设计模式 */ = {
+			isa = PBXGroup;
+			children = (
+				2855974B22325299007FBC66 /* FactoryPattern */,
+			);
+			path = "设计模式";
+			sourceTree = "<group>";
+		};
+		2855974B22325299007FBC66 /* FactoryPattern */ = {
+			isa = PBXGroup;
+			children = (
+				2855974C223260B6007FBC66 /* MsgSend.h */,
+				2855974D223260B6007FBC66 /* MsgSend.m */,
+				2855974F2232637C007FBC66 /* MailMsgSend.h */,
+				285597502232637C007FBC66 /* MailMsgSend.m */,
+				2855975B22326ACE007FBC66 /* SmsMsgSend.h */,
+				2855975C22326ACE007FBC66 /* SmsMsgSend.m */,
+				2855975E22326B7D007FBC66 /* PushMsgSend.h */,
+				2855975F22326B7D007FBC66 /* PushMsgSend.m */,
+				2855975822326636007FBC66 /* MsgSendFactory.h */,
+				2855975922326636007FBC66 /* MsgSendFactory.m */,
+			);
+			path = FactoryPattern;
+			sourceTree = "<group>";
+		};
 		2866D0782226862600A69E83 = {
 			isa = PBXGroup;
 			children = (
@@ -125,10 +176,6 @@
 				2866D0852226862600A69E83 /* AppDelegate.m */,
 				2866D0872226862600A69E83 /* ViewController.h */,
 				2866D0882226862600A69E83 /* ViewController.m */,
-				2866D0CA22268AF200A69E83 /* TextStandCell.h */,
-				2866D0CB22268AF200A69E83 /* TextStandCell.m */,
-				2866D0CD22268B4F00A69E83 /* TextStandCellModel.h */,
-				2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */,
 				2866D08A2226862600A69E83 /* Main.storyboard */,
 				2866D08D2226862900A69E83 /* Assets.xcassets */,
 				2866D08F2226862900A69E83 /* LaunchScreen.storyboard */,
@@ -159,6 +206,8 @@
 		2866D0B6222686DA00A69E83 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2855974A22325244007FBC66 /* 设计模式 */,
+				285597492232521E007FBC66 /* StandBaseView */,
 				2866D0B7222686DA00A69E83 /* StandStructure */,
 			);
 			path = Base;
@@ -350,15 +399,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2855975D22326ACE007FBC66 /* SmsMsgSend.m in Sources */,
 				2866D0C7222686DA00A69E83 /* GZLStandStructureBaseCell.m in Sources */,
 				2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */,
 				2866D0C6222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m in Sources */,
 				2866D0C8222686DA00A69E83 /* GZLStandStructureBaseCellModel.m in Sources */,
+				285597512232637C007FBC66 /* MailMsgSend.m in Sources */,
 				2866D0892226862600A69E83 /* ViewController.m in Sources */,
 				2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */,
 				2866D0942226862900A69E83 /* main.m in Sources */,
+				2855976022326B7D007FBC66 /* PushMsgSend.m in Sources */,
+				2855975A22326636007FBC66 /* MsgSendFactory.m in Sources */,
 				2866D0862226862600A69E83 /* AppDelegate.m in Sources */,
 				2866D0CF22268B4F00A69E83 /* TextStandCellModel.m in Sources */,
+				2855974E223260B6007FBC66 /* MsgSend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
