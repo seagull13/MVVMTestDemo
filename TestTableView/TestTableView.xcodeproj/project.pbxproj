@@ -112,7 +112,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		285597492232521E007FBC66 /* StandBaseView */ = {
+		285597492232521E007FBC66 /* StandBaseViewExample */ = {
 			isa = PBXGroup;
 			children = (
 				2866D0CA22268AF200A69E83 /* TextStandCell.h */,
@@ -120,7 +120,7 @@
 				2866D0CD22268B4F00A69E83 /* TextStandCellModel.h */,
 				2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */,
 			);
-			path = StandBaseView;
+			path = StandBaseViewExample;
 			sourceTree = "<group>";
 		};
 		2855974A22325244007FBC66 /* 设计模式 */ = {
@@ -171,6 +171,8 @@
 		2866D0832226862600A69E83 /* TestTableView */ = {
 			isa = PBXGroup;
 			children = (
+				285597492232521E007FBC66 /* StandBaseViewExample */,
+				2855974A22325244007FBC66 /* 设计模式 */,
 				2866D0B6222686DA00A69E83 /* Base */,
 				2866D0842226862600A69E83 /* AppDelegate.h */,
 				2866D0852226862600A69E83 /* AppDelegate.m */,
@@ -206,8 +208,6 @@
 		2866D0B6222686DA00A69E83 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				2855974A22325244007FBC66 /* 设计模式 */,
-				285597492232521E007FBC66 /* StandBaseView */,
 				2866D0B7222686DA00A69E83 /* StandStructure */,
 			);
 			path = Base;
