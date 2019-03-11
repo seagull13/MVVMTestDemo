@@ -11,7 +11,11 @@
 #import "GZLStandStructureBaseView.h"
 #import "TextStandCellModel.h"
 #import "GZLStandStructureBaseCellModel.h"
-#import "MsgSendFactory.h"
+#import "MsgSendFactory.h" //工厂模式
+
+#import "ShopContext.h" //策略模式
+
+
 @interface DesignPatternVC ()<GZLStandStructureBaseViewProtocol>
 
 /** tableView */
@@ -66,6 +70,7 @@
   cellModel.itemList = nameArray;
   cellModel.containerCellClass = @"TextStandCell";
   [cellDataArray addObject:cellModel];
+  cellModel.isAutoRowheight = YES;
   self.tableView.dataList = cellDataArray;
 
 }
@@ -84,7 +89,6 @@
 -(void)Back{
   NSLog(@"%s ---方法调用",__func__);
   [self dismissViewControllerAnimated:YES completion:^{
-
   }];
 }
 
@@ -92,6 +96,18 @@
 
 -(void)Strategy{
   NSLog(@"%s ---方法调用",__func__);
+  CGFloat money = 100;
+  ShopContext *originalContext = [[ShopContext alloc]initWithType:ShopTypeOriginal];
+  [originalContext calShopPriceWithMoney:money];
+
+  ShopContext *disCountContext = [[ShopContext alloc]initWithType:ShopTypeDisCount];
+  [disCountContext calShopPriceWithMoney:money];
+
+  ShopContext *redictionContext = [[ShopContext alloc]initWithType:ShopTypeRediction];
+  [redictionContext calShopPriceWithMoney:money];
+
+
+
 }
 
 -(void)Decorator{

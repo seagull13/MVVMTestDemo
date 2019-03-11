@@ -27,6 +27,10 @@
 		2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0CB22268AF200A69E83 /* TextStandCell.m */; };
 		2866D0CF22268B4F00A69E83 /* TextStandCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */; };
 		28704BB22236405400E6537D /* DesignPatternVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BB12236405400E6537D /* DesignPatternVC.m */; };
+		28704BB72236594000E6537D /* ShopOriginal.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BB62236594000E6537D /* ShopOriginal.m */; };
+		28704BBA223659A200E6537D /* ShopDiscount.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BB9223659A200E6537D /* ShopDiscount.m */; };
+		28704BBD223659DA00E6537D /* ShopReduction.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BBC223659DA00E6537D /* ShopReduction.m */; };
+		28704BC022365A0E00E6537D /* ShopContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BBF22365A0E00E6537D /* ShopContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,15 @@
 		2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStandCellModel.m; sourceTree = "<group>"; };
 		28704BB02236405400E6537D /* DesignPatternVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignPatternVC.h; sourceTree = "<group>"; };
 		28704BB12236405400E6537D /* DesignPatternVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignPatternVC.m; sourceTree = "<group>"; };
+		28704BB4223656B800E6537D /* CalDiscountStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalDiscountStrategy.h; sourceTree = "<group>"; };
+		28704BB52236594000E6537D /* ShopOriginal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopOriginal.h; sourceTree = "<group>"; };
+		28704BB62236594000E6537D /* ShopOriginal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopOriginal.m; sourceTree = "<group>"; };
+		28704BB8223659A200E6537D /* ShopDiscount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopDiscount.h; sourceTree = "<group>"; };
+		28704BB9223659A200E6537D /* ShopDiscount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopDiscount.m; sourceTree = "<group>"; };
+		28704BBB223659DA00E6537D /* ShopReduction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopReduction.h; sourceTree = "<group>"; };
+		28704BBC223659DA00E6537D /* ShopReduction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopReduction.m; sourceTree = "<group>"; };
+		28704BBE22365A0E00E6537D /* ShopContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopContext.h; sourceTree = "<group>"; };
+		28704BBF22365A0E00E6537D /* ShopContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +415,15 @@
 		28704BA82236400500E6537D /* StrategyPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BB4223656B800E6537D /* CalDiscountStrategy.h */,
+				28704BB52236594000E6537D /* ShopOriginal.h */,
+				28704BB62236594000E6537D /* ShopOriginal.m */,
+				28704BB8223659A200E6537D /* ShopDiscount.h */,
+				28704BB9223659A200E6537D /* ShopDiscount.m */,
+				28704BBB223659DA00E6537D /* ShopReduction.h */,
+				28704BBC223659DA00E6537D /* ShopReduction.m */,
+				28704BBE22365A0E00E6537D /* ShopContext.h */,
+				28704BBF22365A0E00E6537D /* ShopContext.m */,
 			);
 			name = StrategyPattern;
 			path = "TestTableView/设计模式/StrategyPattern";
@@ -596,15 +618,19 @@
 				2855975D22326ACE007FBC66 /* SmsMsgSend.m in Sources */,
 				2866D0C7222686DA00A69E83 /* GZLStandStructureBaseCell.m in Sources */,
 				2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */,
+				28704BBD223659DA00E6537D /* ShopReduction.m in Sources */,
+				28704BC022365A0E00E6537D /* ShopContext.m in Sources */,
 				2866D0C6222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m in Sources */,
 				2866D0C8222686DA00A69E83 /* GZLStandStructureBaseCellModel.m in Sources */,
 				28704BB22236405400E6537D /* DesignPatternVC.m in Sources */,
 				285597512232637C007FBC66 /* MailMsgSend.m in Sources */,
 				2866D0892226862600A69E83 /* ViewController.m in Sources */,
+				28704BB72236594000E6537D /* ShopOriginal.m in Sources */,
 				2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */,
 				2866D0942226862900A69E83 /* main.m in Sources */,
 				2855976022326B7D007FBC66 /* PushMsgSend.m in Sources */,
 				2855975A22326636007FBC66 /* MsgSendFactory.m in Sources */,
+				28704BBA223659A200E6537D /* ShopDiscount.m in Sources */,
 				2866D0862226862600A69E83 /* AppDelegate.m in Sources */,
 				2866D0CF22268B4F00A69E83 /* TextStandCellModel.m in Sources */,
 				2855974E223260B6007FBC66 /* MsgSend.m in Sources */,
