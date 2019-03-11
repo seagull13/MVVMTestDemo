@@ -334,7 +334,7 @@ id (*objc_gZLStandStructureBaseViewMsgSendCreateBaseHeadAndFootViewWithSection)(
     [self.delegate gZLStandStructureBaseCellNeedsReload:indexPath];
   }else{
     [UIView performWithoutAnimation:^{ // 解决刷新跳动问题
-      [_mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section], nil] withRowAnimation:UITableViewRowAnimationNone];
+      [self.mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section], nil] withRowAnimation:UITableViewRowAnimationNone];
     }];
   }
 
@@ -346,7 +346,7 @@ id (*objc_gZLStandStructureBaseViewMsgSendCreateBaseHeadAndFootViewWithSection)(
   }else{
     NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:indexPath.section];
     [UIView performWithoutAnimation:^{
-      [_mainTableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
+      [self.mainTableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
     }];
   }
 

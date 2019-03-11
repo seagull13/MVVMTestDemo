@@ -26,6 +26,7 @@
 		2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0C5222686DA00A69E83 /* GZLStandStructureBaseView.m */; };
 		2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0CB22268AF200A69E83 /* TextStandCell.m */; };
 		2866D0CF22268B4F00A69E83 /* TextStandCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */; };
+		28704BB22236405400E6537D /* DesignPatternVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BB12236405400E6537D /* DesignPatternVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		2866D0CB22268AF200A69E83 /* TextStandCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStandCell.m; sourceTree = "<group>"; };
 		2866D0CD22268B4F00A69E83 /* TextStandCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextStandCellModel.h; sourceTree = "<group>"; };
 		2866D0CE22268B4F00A69E83 /* TextStandCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStandCellModel.m; sourceTree = "<group>"; };
+		28704BB02236405400E6537D /* DesignPatternVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignPatternVC.h; sourceTree = "<group>"; };
+		28704BB12236405400E6537D /* DesignPatternVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignPatternVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,28 @@
 		2855974A22325244007FBC66 /* 设计模式 */ = {
 			isa = PBXGroup;
 			children = (
+				28704BAB2236400500E6537D /* FlyweightPattern */,
+				28704BA62236400500E6537D /* InterpreterPattern */,
+				28704BA72236400500E6537D /* IteratorPattern */,
+				28704BA32236400500E6537D /* MediatorPattern */,
+				28704BA52236400500E6537D /* MementoPattern */,
+				28704BA42236400500E6537D /* ObserverPattern */,
+				28704BAE2236400600E6537D /* PrototypePattern */,
+				28704BAC2236400500E6537D /* ProxyPattern */,
+				28704BAD2236400600E6537D /* SingletonPattern */,
+				28704BAF2236400600E6537D /* StatePattern */,
+				28704BA82236400500E6537D /* StrategyPattern */,
+				28704BA92236400500E6537D /* TemplatePattern */,
+				28704BAA2236400500E6537D /* VisitorPattern */,
+				28704B9B22363FF500E6537D /* AbstractFactoryPattern */,
+				28704BA122363FF600E6537D /* AdapterPattern */,
+				28704B9C22363FF500E6537D /* BridgePattern */,
+				28704BA022363FF600E6537D /* BuilderPattern */,
+				28704B9D22363FF500E6537D /* ChainOfResponsibilityPattern */,
+				28704B9A22363FF500E6537D /* CommandPattern */,
+				28704B9F22363FF600E6537D /* CompositePattern */,
+				28704BA222363FF600E6537D /* DecoratorPattern */,
+				28704B9E22363FF600E6537D /* FacadePattern */,
 				2855974B22325299007FBC66 /* FactoryPattern */,
 			);
 			path = "设计模式";
@@ -178,6 +203,8 @@
 				2866D0852226862600A69E83 /* AppDelegate.m */,
 				2866D0872226862600A69E83 /* ViewController.h */,
 				2866D0882226862600A69E83 /* ViewController.m */,
+				28704BB02236405400E6537D /* DesignPatternVC.h */,
+				28704BB12236405400E6537D /* DesignPatternVC.m */,
 				2866D08A2226862600A69E83 /* Main.storyboard */,
 				2866D08D2226862900A69E83 /* Assets.xcassets */,
 				2866D08F2226862900A69E83 /* LaunchScreen.storyboard */,
@@ -268,6 +295,173 @@
 			);
 			path = View;
 			sourceTree = "<group>";
+		};
+		28704B9A22363FF500E6537D /* CommandPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommandPattern;
+			sourceTree = "<group>";
+		};
+		28704B9B22363FF500E6537D /* AbstractFactoryPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AbstractFactoryPattern;
+			sourceTree = "<group>";
+		};
+		28704B9C22363FF500E6537D /* BridgePattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BridgePattern;
+			sourceTree = "<group>";
+		};
+		28704B9D22363FF500E6537D /* ChainOfResponsibilityPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChainOfResponsibilityPattern;
+			sourceTree = "<group>";
+		};
+		28704B9E22363FF600E6537D /* FacadePattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FacadePattern;
+			sourceTree = "<group>";
+		};
+		28704B9F22363FF600E6537D /* CompositePattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CompositePattern;
+			sourceTree = "<group>";
+		};
+		28704BA022363FF600E6537D /* BuilderPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BuilderPattern;
+			sourceTree = "<group>";
+		};
+		28704BA122363FF600E6537D /* AdapterPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AdapterPattern;
+			sourceTree = "<group>";
+		};
+		28704BA222363FF600E6537D /* DecoratorPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DecoratorPattern;
+			sourceTree = "<group>";
+		};
+		28704BA32236400500E6537D /* MediatorPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MediatorPattern;
+			path = "TestTableView/设计模式/MediatorPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BA42236400500E6537D /* ObserverPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ObserverPattern;
+			path = "TestTableView/设计模式/ObserverPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BA52236400500E6537D /* MementoPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MementoPattern;
+			path = "TestTableView/设计模式/MementoPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BA62236400500E6537D /* InterpreterPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = InterpreterPattern;
+			path = "TestTableView/设计模式/InterpreterPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BA72236400500E6537D /* IteratorPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = IteratorPattern;
+			path = "TestTableView/设计模式/IteratorPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BA82236400500E6537D /* StrategyPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = StrategyPattern;
+			path = "TestTableView/设计模式/StrategyPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BA92236400500E6537D /* TemplatePattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TemplatePattern;
+			path = "TestTableView/设计模式/TemplatePattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BAA2236400500E6537D /* VisitorPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VisitorPattern;
+			path = "TestTableView/设计模式/VisitorPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BAB2236400500E6537D /* FlyweightPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FlyweightPattern;
+			path = "TestTableView/设计模式/FlyweightPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BAC2236400500E6537D /* ProxyPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ProxyPattern;
+			path = "TestTableView/设计模式/ProxyPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BAD2236400600E6537D /* SingletonPattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SingletonPattern;
+			path = "TestTableView/设计模式/SingletonPattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BAE2236400600E6537D /* PrototypePattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PrototypePattern;
+			path = "TestTableView/设计模式/PrototypePattern";
+			sourceTree = SOURCE_ROOT;
+		};
+		28704BAF2236400600E6537D /* StatePattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = StatePattern;
+			path = "TestTableView/设计模式/StatePattern";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -404,6 +598,7 @@
 				2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */,
 				2866D0C6222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m in Sources */,
 				2866D0C8222686DA00A69E83 /* GZLStandStructureBaseCellModel.m in Sources */,
+				28704BB22236405400E6537D /* DesignPatternVC.m in Sources */,
 				285597512232637C007FBC66 /* MailMsgSend.m in Sources */,
 				2866D0892226862600A69E83 /* ViewController.m in Sources */,
 				2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */,
