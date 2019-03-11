@@ -23,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UIColor  *detailColor;
 /** textColor */
 @property(nonatomic,strong)UIColor  *textColor;
+
+/** SelString */
+@property(nonatomic,strong)NSString  *sel;
++(TextStandCellModel *)creatTextStandCellModelWithTitle:(NSString *)title withSel:(NSString *)sel;
 @end
 
 NS_ASSUME_NONNULL_END

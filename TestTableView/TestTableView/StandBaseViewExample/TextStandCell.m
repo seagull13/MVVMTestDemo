@@ -38,7 +38,7 @@
 }
 
 +(CGFloat)cellHeight{
-  return 44;
+  return 60;
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -50,11 +50,13 @@
 #pragma mark - 初始化
 - (void)cellLayout{
 
+  [self addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick)]];
 }
 
 #pragma mark - 模型处理
 - (void)updateCellWithModel:(GZLStandStructureBaseCellModel *__autoreleasing *)model indexPath:(NSIndexPath *)indexPath {
     //    [super updateCellWithModel:model indexPath:indexPath];
+  self.indexPath = indexPath;
     GZLStandStructureBaseCellModel *baseModel = *model;
     if (baseModel == nil) {
         return;
@@ -63,6 +65,7 @@
     if (tempDataModel == nil) {
         return;
     }
+    self.tempDataModel = tempDataModel;
     [self  dealDataWithDataModel:tempDataModel];
     
 }
@@ -72,6 +75,15 @@
     self.textLabel.text = [NSString stringWithFormat:@"姓名: %@ \n身高: %.2f,体重: %.2f",cellModel.name,cellModel.height,cellModel.weight];
     self.textLabel.numberOfLines = 0;
     self.textLabel.textColor = cellModel.textColor;
+
+    self.userInteractionEnabled = cellModel.sel.length > 0;
+  }
+}
+
+
+-(void)tapClick{
+  if ([self.delegate respondsToSelector:@selector(gZLStandStructureBaseCellCallBcakWithParameter:withIndexPath:)]) {
+    [self.delegate gZLStandStructureBaseCellCallBcakWithParameter:self.tempDataModel withIndexPath:self.indexPath];
   }
 }
 #pragma mark - Action

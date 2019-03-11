@@ -21,4 +21,12 @@
 -(UIColor *)randomColor{
   return [UIColor  colorWithRed:arc4random_uniform(255) /255.0 green:arc4random_uniform(255) /255.0 blue:arc4random_uniform(255) /255.0 alpha:1];
 }
+
+
++(TextStandCellModel *)creatTextStandCellModelWithTitle:(NSString *)title withSel:(NSString *)sel{
+  TextStandCellModel *textModel = [[TextStandCellModel alloc]init];
+  textModel.name = title;
+  textModel.sel = sel;
+  return textModel;
+};
 @end

@@ -42,6 +42,9 @@
 - (void)resetData;
 /** baseModel */
 @property(nonatomic,strong)GZLStandStructureBaseCellModel  *baseModel;
+
+/** tempDataModel */
+@property(nonatomic,strong)id  tempDataModel;
 /** 下标 */
 @property(nonatomic,strong)NSIndexPath  *indexPath;
 @end
