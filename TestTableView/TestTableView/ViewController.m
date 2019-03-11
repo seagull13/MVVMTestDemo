@@ -22,20 +22,22 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self creatTableViewData];
-  [self testFactory];
+
+  UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 69, [UIScreen mainScreen].bounds.size.width - 200, 30)];
+  [btn setTitle:@"设计模式" forState:UIControlStateNormal];
+  [btn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+  [self.view addSubview:btn];
+  [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+
   // Do any additional setup after loading the view, typically from a nib.
 }
-
-
--(void)testFactory{
-
-  [[MsgSendFactory creatMsgSendWithType:MsgSendTypeDefault] send];
-  [[MsgSendFactory creatMsgSendWithType:MsgSendTypeMail] send];
-  [[MsgSendFactory creatMsgSendWithType:MsgSendTypeSms] send];
-  [[MsgSendFactory creatMsgSendWithType:MsgSendTypePush] send];
-
-
+-(void)btnClick{
+  [self presentViewController:[[NSClassFromString(@"DesignPatternVC") alloc]init] animated:YES completion:^{
+    
+  }];
 }
+
+
 
 -(void)creatTableViewData{
 
@@ -67,7 +69,7 @@
   if (!_tableView) {
     _tableView = [[GZLStandStructureBaseView alloc]init];
     _tableView.separatorColor = UIColor.redColor;
-    _tableView.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height -64);
+    _tableView.frame = CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height -100);
     [self.view addSubview:_tableView];
   }
   return _tableView;
