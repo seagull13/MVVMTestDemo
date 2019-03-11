@@ -31,6 +31,29 @@
 		28704BBA223659A200E6537D /* ShopDiscount.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BB9223659A200E6537D /* ShopDiscount.m */; };
 		28704BBD223659DA00E6537D /* ShopReduction.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BBC223659DA00E6537D /* ShopReduction.m */; };
 		28704BC022365A0E00E6537D /* ShopContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 28704BBF22365A0E00E6537D /* ShopContext.m */; };
+		28704BC32236630100E6537D /* Strategypatternmd.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BC22236630100E6537D /* Strategypatternmd.md */; };
+		28704BC52236642800E6537D /* FlyweightPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BC42236642800E6537D /* FlyweightPattern.md */; };
+		28704BC72236650000E6537D /* InterpreterPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BC62236650000E6537D /* InterpreterPattern.md */; };
+		28704BC92236652800E6537D /* AbstractFactoryPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BC82236652700E6537D /* AbstractFactoryPattern.md */; };
+		28704BCB2236652E00E6537D /* AdapterPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BCA2236652E00E6537D /* AdapterPattern.md */; };
+		28704BCD2236653500E6537D /* BridgePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BCC2236653500E6537D /* BridgePattern.md */; };
+		28704BD22236655A00E6537D /* BuilderPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BD12236655A00E6537D /* BuilderPattern.md */; };
+		28704BD42236657600E6537D /* ChainOfResponsibilityPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BD32236657600E6537D /* ChainOfResponsibilityPattern.md */; };
+		28704BD62236658500E6537D /* CommandPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BD52236658500E6537D /* CommandPattern.md */; };
+		28704BD82236658B00E6537D /* CompositePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BD72236658B00E6537D /* CompositePattern.md */; };
+		28704BDA2236659200E6537D /* DecoratorPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BD92236659200E6537D /* DecoratorPattern.md */; };
+		28704BDC2236659800E6537D /* FacadePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BDB2236659800E6537D /* FacadePattern.md */; };
+		28704BDE223665AB00E6537D /* FactoryPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BDD223665AB00E6537D /* FactoryPattern.md */; };
+		28704BE2223665BE00E6537D /* IteratorPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BE1223665BD00E6537D /* IteratorPattern.md */; };
+		28704BE4223665CA00E6537D /* MediatorPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BE3223665CA00E6537D /* MediatorPattern.md */; };
+		28704BE6223665D300E6537D /* MementoPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BE5223665D200E6537D /* MementoPattern.md */; };
+		28704BE8223665D900E6537D /* ObserverPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BE7223665D900E6537D /* ObserverPattern.md */; };
+		28704BEA223665DF00E6537D /* PrototypePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BE9223665DF00E6537D /* PrototypePattern.md */; };
+		28704BEC223665EA00E6537D /* ProxyPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BEB223665EA00E6537D /* ProxyPattern.md */; };
+		28704BEE223665F500E6537D /* SingletonPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BED223665F500E6537D /* SingletonPattern.md */; };
+		28704BF0223665FC00E6537D /* StatePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BEF223665FC00E6537D /* StatePattern.md */; };
+		28704BF22236660C00E6537D /* TemplatePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BF12236660B00E6537D /* TemplatePattern.md */; };
+		28704BF42236661400E6537D /* VisitorPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BF32236661400E6537D /* VisitorPattern.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +124,29 @@
 		28704BBC223659DA00E6537D /* ShopReduction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopReduction.m; sourceTree = "<group>"; };
 		28704BBE22365A0E00E6537D /* ShopContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopContext.h; sourceTree = "<group>"; };
 		28704BBF22365A0E00E6537D /* ShopContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopContext.m; sourceTree = "<group>"; };
+		28704BC22236630100E6537D /* Strategypatternmd.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Strategypatternmd.md; sourceTree = "<group>"; };
+		28704BC42236642800E6537D /* FlyweightPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = FlyweightPattern.md; sourceTree = "<group>"; };
+		28704BC62236650000E6537D /* InterpreterPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = InterpreterPattern.md; sourceTree = "<group>"; };
+		28704BC82236652700E6537D /* AbstractFactoryPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = AbstractFactoryPattern.md; sourceTree = "<group>"; };
+		28704BCA2236652E00E6537D /* AdapterPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = AdapterPattern.md; sourceTree = "<group>"; };
+		28704BCC2236653500E6537D /* BridgePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = BridgePattern.md; sourceTree = "<group>"; };
+		28704BD12236655A00E6537D /* BuilderPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = BuilderPattern.md; sourceTree = "<group>"; };
+		28704BD32236657600E6537D /* ChainOfResponsibilityPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ChainOfResponsibilityPattern.md; sourceTree = "<group>"; };
+		28704BD52236658500E6537D /* CommandPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CommandPattern.md; sourceTree = "<group>"; };
+		28704BD72236658B00E6537D /* CompositePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CompositePattern.md; sourceTree = "<group>"; };
+		28704BD92236659200E6537D /* DecoratorPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = DecoratorPattern.md; sourceTree = "<group>"; };
+		28704BDB2236659800E6537D /* FacadePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = FacadePattern.md; sourceTree = "<group>"; };
+		28704BDD223665AB00E6537D /* FactoryPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = FactoryPattern.md; sourceTree = "<group>"; };
+		28704BE1223665BD00E6537D /* IteratorPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = IteratorPattern.md; sourceTree = "<group>"; };
+		28704BE3223665CA00E6537D /* MediatorPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = MediatorPattern.md; sourceTree = "<group>"; };
+		28704BE5223665D200E6537D /* MementoPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = MementoPattern.md; sourceTree = "<group>"; };
+		28704BE7223665D900E6537D /* ObserverPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ObserverPattern.md; sourceTree = "<group>"; };
+		28704BE9223665DF00E6537D /* PrototypePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = PrototypePattern.md; sourceTree = "<group>"; };
+		28704BEB223665EA00E6537D /* ProxyPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ProxyPattern.md; sourceTree = "<group>"; };
+		28704BED223665F500E6537D /* SingletonPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SingletonPattern.md; sourceTree = "<group>"; };
+		28704BEF223665FC00E6537D /* StatePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = StatePattern.md; sourceTree = "<group>"; };
+		28704BF12236660B00E6537D /* TemplatePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TemplatePattern.md; sourceTree = "<group>"; };
+		28704BF32236661400E6537D /* VisitorPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = VisitorPattern.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +218,7 @@
 		2855974B22325299007FBC66 /* FactoryPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BDD223665AB00E6537D /* FactoryPattern.md */,
 				2855974C223260B6007FBC66 /* MsgSend.h */,
 				2855974D223260B6007FBC66 /* MsgSend.m */,
 				2855974F2232637C007FBC66 /* MailMsgSend.h */,
@@ -312,6 +359,7 @@
 		28704B9A22363FF500E6537D /* CommandPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BD52236658500E6537D /* CommandPattern.md */,
 			);
 			path = CommandPattern;
 			sourceTree = "<group>";
@@ -319,6 +367,7 @@
 		28704B9B22363FF500E6537D /* AbstractFactoryPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BC82236652700E6537D /* AbstractFactoryPattern.md */,
 			);
 			path = AbstractFactoryPattern;
 			sourceTree = "<group>";
@@ -326,6 +375,7 @@
 		28704B9C22363FF500E6537D /* BridgePattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BCC2236653500E6537D /* BridgePattern.md */,
 			);
 			path = BridgePattern;
 			sourceTree = "<group>";
@@ -333,6 +383,7 @@
 		28704B9D22363FF500E6537D /* ChainOfResponsibilityPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BD32236657600E6537D /* ChainOfResponsibilityPattern.md */,
 			);
 			path = ChainOfResponsibilityPattern;
 			sourceTree = "<group>";
@@ -340,6 +391,7 @@
 		28704B9E22363FF600E6537D /* FacadePattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BDB2236659800E6537D /* FacadePattern.md */,
 			);
 			path = FacadePattern;
 			sourceTree = "<group>";
@@ -347,6 +399,7 @@
 		28704B9F22363FF600E6537D /* CompositePattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BD72236658B00E6537D /* CompositePattern.md */,
 			);
 			path = CompositePattern;
 			sourceTree = "<group>";
@@ -354,6 +407,7 @@
 		28704BA022363FF600E6537D /* BuilderPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BD12236655A00E6537D /* BuilderPattern.md */,
 			);
 			path = BuilderPattern;
 			sourceTree = "<group>";
@@ -361,6 +415,7 @@
 		28704BA122363FF600E6537D /* AdapterPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BCA2236652E00E6537D /* AdapterPattern.md */,
 			);
 			path = AdapterPattern;
 			sourceTree = "<group>";
@@ -368,6 +423,7 @@
 		28704BA222363FF600E6537D /* DecoratorPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BD92236659200E6537D /* DecoratorPattern.md */,
 			);
 			path = DecoratorPattern;
 			sourceTree = "<group>";
@@ -375,6 +431,7 @@
 		28704BA32236400500E6537D /* MediatorPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BE3223665CA00E6537D /* MediatorPattern.md */,
 			);
 			name = MediatorPattern;
 			path = "TestTableView/设计模式/MediatorPattern";
@@ -383,6 +440,7 @@
 		28704BA42236400500E6537D /* ObserverPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BE7223665D900E6537D /* ObserverPattern.md */,
 			);
 			name = ObserverPattern;
 			path = "TestTableView/设计模式/ObserverPattern";
@@ -391,6 +449,7 @@
 		28704BA52236400500E6537D /* MementoPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BE5223665D200E6537D /* MementoPattern.md */,
 			);
 			name = MementoPattern;
 			path = "TestTableView/设计模式/MementoPattern";
@@ -399,6 +458,7 @@
 		28704BA62236400500E6537D /* InterpreterPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BC62236650000E6537D /* InterpreterPattern.md */,
 			);
 			name = InterpreterPattern;
 			path = "TestTableView/设计模式/InterpreterPattern";
@@ -407,6 +467,7 @@
 		28704BA72236400500E6537D /* IteratorPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BE1223665BD00E6537D /* IteratorPattern.md */,
 			);
 			name = IteratorPattern;
 			path = "TestTableView/设计模式/IteratorPattern";
@@ -424,6 +485,7 @@
 				28704BBC223659DA00E6537D /* ShopReduction.m */,
 				28704BBE22365A0E00E6537D /* ShopContext.h */,
 				28704BBF22365A0E00E6537D /* ShopContext.m */,
+				28704BC22236630100E6537D /* Strategypatternmd.md */,
 			);
 			name = StrategyPattern;
 			path = "TestTableView/设计模式/StrategyPattern";
@@ -432,6 +494,7 @@
 		28704BA92236400500E6537D /* TemplatePattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BF12236660B00E6537D /* TemplatePattern.md */,
 			);
 			name = TemplatePattern;
 			path = "TestTableView/设计模式/TemplatePattern";
@@ -440,6 +503,7 @@
 		28704BAA2236400500E6537D /* VisitorPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BF32236661400E6537D /* VisitorPattern.md */,
 			);
 			name = VisitorPattern;
 			path = "TestTableView/设计模式/VisitorPattern";
@@ -448,6 +512,7 @@
 		28704BAB2236400500E6537D /* FlyweightPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BC42236642800E6537D /* FlyweightPattern.md */,
 			);
 			name = FlyweightPattern;
 			path = "TestTableView/设计模式/FlyweightPattern";
@@ -456,6 +521,7 @@
 		28704BAC2236400500E6537D /* ProxyPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BEB223665EA00E6537D /* ProxyPattern.md */,
 			);
 			name = ProxyPattern;
 			path = "TestTableView/设计模式/ProxyPattern";
@@ -464,6 +530,7 @@
 		28704BAD2236400600E6537D /* SingletonPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BED223665F500E6537D /* SingletonPattern.md */,
 			);
 			name = SingletonPattern;
 			path = "TestTableView/设计模式/SingletonPattern";
@@ -472,6 +539,7 @@
 		28704BAE2236400600E6537D /* PrototypePattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BE9223665DF00E6537D /* PrototypePattern.md */,
 			);
 			name = PrototypePattern;
 			path = "TestTableView/设计模式/PrototypePattern";
@@ -480,6 +548,7 @@
 		28704BAF2236400600E6537D /* StatePattern */ = {
 			isa = PBXGroup;
 			children = (
+				28704BEF223665FC00E6537D /* StatePattern.md */,
 			);
 			name = StatePattern;
 			path = "TestTableView/设计模式/StatePattern";
@@ -588,9 +657,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28704BEE223665F500E6537D /* SingletonPattern.md in Resources */,
+				28704BD82236658B00E6537D /* CompositePattern.md in Resources */,
+				28704BE2223665BE00E6537D /* IteratorPattern.md in Resources */,
+				28704BEA223665DF00E6537D /* PrototypePattern.md in Resources */,
+				28704BE6223665D300E6537D /* MementoPattern.md in Resources */,
+				28704BE8223665D900E6537D /* ObserverPattern.md in Resources */,
 				2866D0912226862900A69E83 /* LaunchScreen.storyboard in Resources */,
+				28704BEC223665EA00E6537D /* ProxyPattern.md in Resources */,
+				28704BF22236660C00E6537D /* TemplatePattern.md in Resources */,
+				28704BC32236630100E6537D /* Strategypatternmd.md in Resources */,
+				28704BC52236642800E6537D /* FlyweightPattern.md in Resources */,
+				28704BCD2236653500E6537D /* BridgePattern.md in Resources */,
+				28704BE4223665CA00E6537D /* MediatorPattern.md in Resources */,
+				28704BDC2236659800E6537D /* FacadePattern.md in Resources */,
+				28704BDE223665AB00E6537D /* FactoryPattern.md in Resources */,
+				28704BC92236652800E6537D /* AbstractFactoryPattern.md in Resources */,
+				28704BF42236661400E6537D /* VisitorPattern.md in Resources */,
 				2866D08E2226862900A69E83 /* Assets.xcassets in Resources */,
+				28704BDA2236659200E6537D /* DecoratorPattern.md in Resources */,
+				28704BC72236650000E6537D /* InterpreterPattern.md in Resources */,
 				2866D08C2226862600A69E83 /* Main.storyboard in Resources */,
+				28704BCB2236652E00E6537D /* AdapterPattern.md in Resources */,
+				28704BD62236658500E6537D /* CommandPattern.md in Resources */,
+				28704BF0223665FC00E6537D /* StatePattern.md in Resources */,
+				28704BD42236657600E6537D /* ChainOfResponsibilityPattern.md in Resources */,
+				28704BD22236655A00E6537D /* BuilderPattern.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
