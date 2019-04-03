@@ -54,6 +54,10 @@
 		28704BF0223665FC00E6537D /* StatePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BEF223665FC00E6537D /* StatePattern.md */; };
 		28704BF22236660C00E6537D /* TemplatePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BF12236660B00E6537D /* TemplatePattern.md */; };
 		28704BF42236661400E6537D /* VisitorPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BF32236661400E6537D /* VisitorPattern.md */; };
+		7BD4CCF52254F34600E2BAB3 /* MVVMSimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4CCF42254F34600E2BAB3 /* MVVMSimpleView.m */; };
+		7BD4CCF82254F3C200E2BAB3 /* MVVMSimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4CCF72254F3C200E2BAB3 /* MVVMSimpleModel.m */; };
+		7BD4CCFB2254F3D600E2BAB3 /* MVVMSimpleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4CCFA2254F3D600E2BAB3 /* MVVMSimpleViewModel.m */; };
+		7BD4CCFE2254F41200E2BAB3 /* MVVMSimpleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4CCFD2254F41200E2BAB3 /* MVVMSimpleVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +151,14 @@
 		28704BEF223665FC00E6537D /* StatePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = StatePattern.md; sourceTree = "<group>"; };
 		28704BF12236660B00E6537D /* TemplatePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TemplatePattern.md; sourceTree = "<group>"; };
 		28704BF32236661400E6537D /* VisitorPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = VisitorPattern.md; sourceTree = "<group>"; };
+		7BD4CCF32254F34600E2BAB3 /* MVVMSimpleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMSimpleView.h; sourceTree = "<group>"; };
+		7BD4CCF42254F34600E2BAB3 /* MVVMSimpleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMSimpleView.m; sourceTree = "<group>"; };
+		7BD4CCF62254F3C200E2BAB3 /* MVVMSimpleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMSimpleModel.h; sourceTree = "<group>"; };
+		7BD4CCF72254F3C200E2BAB3 /* MVVMSimpleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMSimpleModel.m; sourceTree = "<group>"; };
+		7BD4CCF92254F3D600E2BAB3 /* MVVMSimpleViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMSimpleViewModel.h; sourceTree = "<group>"; };
+		7BD4CCFA2254F3D600E2BAB3 /* MVVMSimpleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMSimpleViewModel.m; sourceTree = "<group>"; };
+		7BD4CCFC2254F41200E2BAB3 /* MVVMSimpleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMSimpleVC.h; sourceTree = "<group>"; };
+		7BD4CCFD2254F41200E2BAB3 /* MVVMSimpleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMSimpleVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +268,7 @@
 		2866D0832226862600A69E83 /* TestTableView */ = {
 			isa = PBXGroup;
 			children = (
+				7BD4CCF22254F32E00E2BAB3 /* MVVMDesignPattern */,
 				285597492232521E007FBC66 /* StandBaseViewExample */,
 				2855974A22325244007FBC66 /* 设计模式 */,
 				2866D0B6222686DA00A69E83 /* Base */,
@@ -554,6 +567,21 @@
 			path = "TestTableView/设计模式/StatePattern";
 			sourceTree = SOURCE_ROOT;
 		};
+		7BD4CCF22254F32E00E2BAB3 /* MVVMDesignPattern */ = {
+			isa = PBXGroup;
+			children = (
+				7BD4CCF32254F34600E2BAB3 /* MVVMSimpleView.h */,
+				7BD4CCF42254F34600E2BAB3 /* MVVMSimpleView.m */,
+				7BD4CCF62254F3C200E2BAB3 /* MVVMSimpleModel.h */,
+				7BD4CCF72254F3C200E2BAB3 /* MVVMSimpleModel.m */,
+				7BD4CCF92254F3D600E2BAB3 /* MVVMSimpleViewModel.h */,
+				7BD4CCFA2254F3D600E2BAB3 /* MVVMSimpleViewModel.m */,
+				7BD4CCFC2254F41200E2BAB3 /* MVVMSimpleVC.h */,
+				7BD4CCFD2254F41200E2BAB3 /* MVVMSimpleVC.m */,
+			);
+			path = MVVMDesignPattern;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -709,16 +737,20 @@
 			files = (
 				2855975D22326ACE007FBC66 /* SmsMsgSend.m in Sources */,
 				2866D0C7222686DA00A69E83 /* GZLStandStructureBaseCell.m in Sources */,
+				7BD4CCF82254F3C200E2BAB3 /* MVVMSimpleModel.m in Sources */,
 				2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */,
 				28704BBD223659DA00E6537D /* ShopReduction.m in Sources */,
 				28704BC022365A0E00E6537D /* ShopContext.m in Sources */,
 				2866D0C6222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m in Sources */,
+				7BD4CCF52254F34600E2BAB3 /* MVVMSimpleView.m in Sources */,
 				2866D0C8222686DA00A69E83 /* GZLStandStructureBaseCellModel.m in Sources */,
 				28704BB22236405400E6537D /* DesignPatternVC.m in Sources */,
 				285597512232637C007FBC66 /* MailMsgSend.m in Sources */,
 				2866D0892226862600A69E83 /* ViewController.m in Sources */,
+				7BD4CCFE2254F41200E2BAB3 /* MVVMSimpleVC.m in Sources */,
 				28704BB72236594000E6537D /* ShopOriginal.m in Sources */,
 				2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */,
+				7BD4CCFB2254F3D600E2BAB3 /* MVVMSimpleViewModel.m in Sources */,
 				2866D0942226862900A69E83 /* main.m in Sources */,
 				2855976022326B7D007FBC66 /* PushMsgSend.m in Sources */,
 				2855975A22326636007FBC66 /* MsgSendFactory.m in Sources */,

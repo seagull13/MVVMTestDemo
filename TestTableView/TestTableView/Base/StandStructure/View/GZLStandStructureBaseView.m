@@ -92,7 +92,6 @@ id (*objc_gZLStandStructureBaseViewMsgSendCreateBaseHeadAndFootViewWithSection)(
   if ([self.delegate respondsToSelector:@selector(gZLStandStructureTableView:cellForRowAtIndexPath:)]) {
     return   [self.delegate gZLStandStructureTableView:tableView cellForRowAtIndexPath:indexPath];
   }
-
   //2.防止数组越界
   if (indexPath.section >  _dataList.count - 1  ) {
     UITableViewCell *tempCell = [[UITableViewCell alloc]init];
