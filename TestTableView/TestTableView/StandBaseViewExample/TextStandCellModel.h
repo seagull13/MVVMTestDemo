@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** SelString */
 @property(nonatomic,strong)NSString  *sel;
+
+-(void)dealTextStandCellModel;
 +(TextStandCellModel *)creatTextStandCellModelWithTitle:(NSString *)title withSel:(NSString *)sel;
 @end
 

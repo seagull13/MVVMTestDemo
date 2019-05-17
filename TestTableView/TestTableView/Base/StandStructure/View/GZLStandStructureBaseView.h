@@ -6,21 +6,15 @@
 // GZL INTERNATIONAL TRAVEL SERVICE  LTD.
 //
 
-#import <UIKit/UIKit.h>
-#import "GZLStandStructureBaseViewProtocol.h"
-
-@interface GZLStandStructureBaseView : UIView <GZLStandStructureBaseViewProtocol>
-/** 代理 */
-@property (weak, nonatomic)id<GZLStandStructureBaseViewProtocol> delegate;
-/** tableView */
+#import <UIKit/UITableView.h>
+#import "OYStructureTableViewProtocol.h"
+@interface GZLStandStructureBaseView : UIView <OYStructureTableViewProtocol>
+/**代理 协议 */
+@property (weak, nonatomic)id<OYStructureTableViewProtocol> delegate;
+/**tableView */
 @property (weak, nonatomic)UITableView *mainTableView;
 /**数据源 */
 @property (copy, nonatomic) NSArray *dataList;
-/** 分割线颜色 */
-@property(nonatomic,strong)UIColor  *separatorColor;
-@property(nonatomic,assign)UITableViewCellSeparatorStyle   separatorStyle;
+
 -(instancetype)initWithFrame:(CGRect)frame iSNotEstimatedRowHeight:(BOOL)iSNotEstimatedRow;
-@property(nonatomic,assign) BOOL  isNotNeedTempDictCell;
-@property(nonatomic,assign) UIEdgeInsets  contentInset;
--(void)setDataList:(NSArray *)dataList performWithoutAnimation:(BOOL)animat;
 @end

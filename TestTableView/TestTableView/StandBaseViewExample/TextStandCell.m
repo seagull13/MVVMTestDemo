@@ -54,10 +54,10 @@
 }
 
 #pragma mark - 模型处理
-- (void)updateCellWithModel:(GZLStandStructureBaseCellModel *__autoreleasing *)model indexPath:(NSIndexPath *)indexPath {
+- (void)updateCellWithModel:(GZLStandStructureBaseCellModel *)model indexPath:(NSIndexPath *)indexPath {
     //    [super updateCellWithModel:model indexPath:indexPath];
   self.indexPath = indexPath;
-    GZLStandStructureBaseCellModel *baseModel = *model;
+    GZLStandStructureBaseCellModel *baseModel = model;
     if (baseModel == nil) {
         return;
     }
@@ -87,8 +87,8 @@
 
 
 -(void)tapClick{
-  if ([self.delegate respondsToSelector:@selector(gZLStandStructureBaseCellCallBcakWithParameter:withIndexPath:)]) {
-    [self.delegate gZLStandStructureBaseCellCallBcakWithParameter:self.tempDataModel withIndexPath:self.indexPath];
+  if ([self.delegate respondsToSelector:@selector(oyStructureTableViewCellCallBcakWithParameter:withIndexPath:)]) {
+    [self.delegate oyStructureTableViewCellCallBcakWithParameter:self.tempDataModel withIndexPath:self.indexPath];
   }
 }
 #pragma mark - Action

@@ -22,6 +22,10 @@
   return [UIColor  colorWithRed:arc4random_uniform(255) /255.0 green:arc4random_uniform(255) /255.0 blue:arc4random_uniform(255) /255.0 alpha:1];
 }
 
+-(void)dealTextStandCellModel{
+    self.name = [self.name stringByAppendingString:self.name];
+    
+}
 
 +(TextStandCellModel *)creatTextStandCellModelWithTitle:(NSString *)title withSel:(NSString *)sel{
   TextStandCellModel *textModel = [[TextStandCellModel alloc]init];

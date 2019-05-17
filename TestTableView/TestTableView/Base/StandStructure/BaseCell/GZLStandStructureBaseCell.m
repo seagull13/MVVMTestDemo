@@ -28,7 +28,7 @@
     return nil;
 }
 
-- (void)updateCellWithModel:(GZLStandStructureBaseCellModel *__autoreleasing *)model
+- (void)updateCellWithModel:(GZLStandStructureBaseCellModel *)model
                   indexPath:(NSIndexPath *)indexPath {
 //    self.indexPath = indexPath;
 //    NSAssert(NO, @"\nERROR: Must realize this function in subClass %s", __func__);

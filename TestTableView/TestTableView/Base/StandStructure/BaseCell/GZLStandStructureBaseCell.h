@@ -10,11 +10,11 @@
 
 
 
-#import "GZLStandStructureBaseViewProtocol.h"
+#import "OYStructureTableViewProtocol.h"
 #import "GZLStandStructureBaseCellModel.h"
 
-@interface GZLStandStructureBaseCell : UITableViewCell  <GZLStandStructureBaseViewProtocol>
-@property (weak, nonatomic) id<GZLStandStructureBaseViewProtocol> delegate;
+@interface GZLStandStructureBaseCell : UITableViewCell  <OYStructureTableViewProtocol>
+@property (weak, nonatomic) id<OYStructureTableViewProtocol> delegate;
 /**
  标记位
  @return  标记位
@@ -34,7 +34,7 @@
  @param model 基础模型
  @param indexPath indePath
  */
-- (void)updateCellWithModel:(GZLStandStructureBaseCellModel **)model indexPath:(NSIndexPath *)indexPath;
+- (void)updateCellWithModel:(GZLStandStructureBaseCellModel *)model indexPath:(NSIndexPath *)indexPath;
 
 /**
  重设数据源

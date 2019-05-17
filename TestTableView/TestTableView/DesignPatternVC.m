@@ -12,7 +12,8 @@
 #import "GZLStandStructureBaseCellModel.h"
 #import "MsgSendFactory.h" //工厂模式
 #import "ShopContext.h" //策略模式
-@interface DesignPatternVC ()<GZLStandStructureBaseViewProtocol>
+#import "OYStructureTableViewProtocol.h"
+@interface DesignPatternVC ()<OYStructureTableViewProtocol>
 /** tableView */
 @property(nonatomic,strong)GZLStandStructureBaseView  *tableView;
 @end
@@ -67,7 +68,7 @@
 
 }
 
--(void)gZLStandStructureBaseCellCallBcakWithParameter:(id)parameter withIndexPath:(NSIndexPath *)indexPath{
+-(void)oyStructureTableViewCellCallBcakWithParameter:(id)parameter withIndexPath:(NSIndexPath *)indexPath{
   if ([parameter isKindOfClass:TextStandCellModel.class]) {
     TextStandCellModel *model = parameter;
     if (model.sel.length > 0) {
@@ -193,7 +194,6 @@
 -(GZLStandStructureBaseView *)tableView{
   if (!_tableView) {
     _tableView = [[GZLStandStructureBaseView alloc]init];
-    _tableView.separatorColor = UIColor.redColor;
     _tableView.delegate = self;
     _tableView.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height -64);
     [self.view addSubview:_tableView];

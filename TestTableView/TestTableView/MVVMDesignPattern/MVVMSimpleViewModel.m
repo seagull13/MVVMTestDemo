@@ -36,10 +36,10 @@
              name = @"殴打小朋友";
             break;
         case 3:
-             name = @"陈小姐";
+//             name = @"陈小姐";
             break;
         case 4:
-             name = @"陈姑娘";
+//             name = @"陈姑娘";
             break;
         case 5:
              name = @"喜欢";

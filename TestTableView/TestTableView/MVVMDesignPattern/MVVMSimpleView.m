@@ -11,7 +11,6 @@
 @interface MVVMSimpleView ()
 /** *  名字按钮  */
 @property(nonatomic,strong)UIButton  *nameButton;
-
 /** *  viewModel */
 @property(nonatomic,strong)MVVMSimpleViewModel  *viewModel;
 @end

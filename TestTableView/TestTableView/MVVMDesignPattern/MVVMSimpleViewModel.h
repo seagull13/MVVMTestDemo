@@ -7,13 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
 NS_ASSUME_NONNULL_BEGIN
-
 @interface MVVMSimpleViewModel : NSObject
-
-
-/** *  名字 */
+/***  名字 */
 @property(nonatomic,strong)NSString  *nameString;
 //绑定model
 - (void)bindModel:(id)model;

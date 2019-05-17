@@ -32,13 +32,13 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)btnClick{
-//    [self presentViewController:[[NSClassFromString(@"DesignPatternVC") alloc]init] animated:YES completion:^{
-//        
-//    }];
-    
-    [self presentViewController:[[NSClassFromString(@"MVVMSimpleVC") alloc]init] animated:YES completion:^{
-        
+    [self presentViewController:[[NSClassFromString(@"DesignPatternVC") alloc]init] animated:YES completion:^{
+
     }];
+
+//    [self presentViewController:[[NSClassFromString(@"MVVMSimpleVC") alloc]init] animated:YES completion:^{
+//
+//    }];
 }
 
 
@@ -46,7 +46,7 @@
 -(void)creatTableViewData{
     
     NSMutableArray *dataArray = [NSMutableArray array];
-    NSArray *nameArray = @[@"小红",@"小明",@"小辉",@"jack",@"rose",@"小德"];
+    NSArray *nameArray = @[@"小红",@"小明",@"小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红小红",@"jack",@"rose",@"小德"];
     
     for (int i = 0; i < 1000; i++) {
         TextStandCellModel *textModel = [[TextStandCellModel alloc]init];
@@ -60,7 +60,8 @@
     NSMutableArray *cellDataArray = [NSMutableArray array];
     GZLStandStructureBaseCellModel *cellModel = [[GZLStandStructureBaseCellModel alloc]init];
     cellModel.itemList = dataArray;
-    cellModel.containerCellClass = @"TextStandCell";
+    cellModel.isAutoRowheight = YES;
+    cellModel.containerCellClass = @"TextExampleCell";
     [cellDataArray addObject:cellModel];
     self.tableView.dataList = cellDataArray;
     
@@ -71,7 +72,6 @@
 -(GZLStandStructureBaseView *)tableView{
     if (!_tableView) {
         _tableView = [[GZLStandStructureBaseView alloc]init];
-        _tableView.separatorColor = UIColor.redColor;
         _tableView.frame = CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height -100);
         [self.view addSubview:_tableView];
     }
