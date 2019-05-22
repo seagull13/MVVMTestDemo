@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MVVMBindViewModelProtocol.h"
 @protocol GZLMainViewDelegate <NSObject>
 
 @optional
@@ -15,9 +15,8 @@
 @required
 
 @end
-@interface GZLMainView : UIView
+
+@interface GZLMainView<MVVMBindViewModelProtocol> : UIView
 /** 代理 */
 @property (weak, nonatomic)id<GZLMainViewDelegate> delegate;
-
-
 @end

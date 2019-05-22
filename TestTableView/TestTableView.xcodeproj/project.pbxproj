@@ -250,6 +250,7 @@
 		28C6D6562293D45C00C1BAFC /* GZLMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainView.m; sourceTree = "<group>"; };
 		28C6D6582293D49D00C1BAFC /* GZLMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainVC.h; sourceTree = "<group>"; };
 		28C6D6592293D49D00C1BAFC /* GZLMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainVC.m; sourceTree = "<group>"; };
+		28D3A0AD22952AFB0026F4E1 /* MVVMBindViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMBindViewModelProtocol.h; sourceTree = "<group>"; };
 		3568C3E06766042145A08361 /* Pods-TestTableViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableViewUITests.release.xcconfig"; path = "Target Support Files/Pods-TestTableViewUITests/Pods-TestTableViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		53EB712C898F476A22DEFE3A /* Pods-TestTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableView.debug.xcconfig"; path = "Target Support Files/Pods-TestTableView/Pods-TestTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		740C6B14A8B97A60D1DBCC1F /* libPods-TestTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -936,6 +937,7 @@
 			children = (
 				28C6D6582293D49D00C1BAFC /* GZLMainVC.h */,
 				28C6D6592293D49D00C1BAFC /* GZLMainVC.m */,
+				28D3A0AD22952AFB0026F4E1 /* MVVMBindViewModelProtocol.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

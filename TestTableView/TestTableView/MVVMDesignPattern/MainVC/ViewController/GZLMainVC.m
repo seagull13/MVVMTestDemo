@@ -8,10 +8,13 @@
 
 #import "GZLMainVC.h"
 #import "GZLMainVCDataViewModel.h"
+#import "GZLMainView.h"
+#import <Masonry/Masonry.h>
 @interface GZLMainVC ()
 /** *  viewModel */
 @property(nonatomic,strong)GZLMainVCDataViewModel  *mainViewModel;
-
+/** *  mainView */
+@property(nonatomic,strong)GZLMainView  *mainView;
 @end
 @implementation GZLMainVC
 #pragma mark - 系统方法
@@ -19,6 +22,10 @@
     [super viewDidLoad];
     
     [self setupBaseUI];
+    [self.mainView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view);
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -37,51 +44,44 @@
     
 }
 - (void)dealloc{
-    [self.mainViewModel removeObserver:self forKeyPath:NSStringFromSelector(@selector(baseModel))];
-    [self.mainViewModel removeObserver:self forKeyPath:NSStringFromSelector(@selector(recomandModel))];
+    [self removeMVVMObserve];
     NSLog(@"%s", __func__);
 }
-
-
-#pragma mark - 初始化
-- (void)setupBaseUI{
-    self.view.backgroundColor = UIColor.whiteColor;
+-(void)removeMVVMObserve{
+    [self.mainViewModel removeObserver:self forKeyPath:NSStringFromSelector(@selector(baseModel))];
+    [self.mainViewModel removeObserver:self forKeyPath:NSStringFromSelector(@selector(recomandModel))];
+}
+-(void)addMVVMObserve{
     [self.mainViewModel addObserver:self forKeyPath:NSStringFromSelector(@selector(baseModel)) options:NSKeyValueObservingOptionOld |NSKeyValueObservingOptionNew context:nil];
     [self.mainViewModel addObserver:self forKeyPath:NSStringFromSelector(@selector(recomandModel)) options:NSKeyValueObservingOptionOld |NSKeyValueObservingOptionNew context:nil];
 }
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if ([keyPath isEqualToString:NSStringFromSelector(@selector(baseModel))]) {
-
-        [self test];
-    }else if ([keyPath isEqualToString:NSStringFromSelector(@selector(recomandModel))]){
-        [self test];
-    }
+#pragma mark - 初始化
+- (void)setupBaseUI{
+    self.view.backgroundColor = UIColor.whiteColor;
+    [self addMVVMObserve];
 }
--(void)test{
-    GZLMainBaseDataModel *model = self.mainViewModel.baseModel;
-    self.view.backgroundColor = UIColor.redColor;
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    [self.mainView bindViewModel:self.mainViewModel];
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self dismissViewControllerAnimated:YES completion:^{
-
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-#pragma mark - 数据源
-#pragma mark - 
 
 #pragma mark - 代理
 #pragma mark -
-
-
-#pragma mark - 通知
-
-
 #pragma mark - Action
 #pragma mark - 懒加载
-
 -(GZLMainVCDataViewModel *)mainViewModel{
     if (!_mainViewModel) {
         _mainViewModel = [[GZLMainVCDataViewModel alloc]init];
     }return _mainViewModel;
+}
+
+-(GZLMainView *)mainView{
+    if (!_mainView) {
+        _mainView = [[GZLMainView alloc]init];
+        [self.view addSubview:_mainView];
+        [_mainView bindViewModel:self.mainViewModel];
+    }return _mainView;
 }
 @end

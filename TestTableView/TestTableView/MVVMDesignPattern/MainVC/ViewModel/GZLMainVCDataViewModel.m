@@ -19,15 +19,30 @@
 -(instancetype)init{
     self = [super init];
     if (self) {
+        [self readData];
         [self baseDataCenter];
         [self recommandCenter];
     }return self;
+}
+
+-(void)cacheData:(id)data{
+    [data writeToFile:[self getCacheDataPath] atomically:YES];
+}
+-(void)readData{
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[self getCacheDataPath]];
+    self.baseModel =  [GZLMainBaseDataModel modelWithDictionary:dic];
+}
+-(NSString *)getCacheDataPath{
+    return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"GZLMainVCBaseDataApiDataCenter.plist"];
 }
 
 -(GZLMainVCApiDataCenter *)baseDataCenter{
     if (!_baseDataCenter) {
         _baseDataCenter = [GZLMainVCApiDataCenter creatBaseDataMangerWithSuccess:^(id resposeData) {
             self.baseModel =  [GZLMainBaseDataModel modelWithDictionary:resposeData];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self cacheData:resposeData];
+            });
         } Failer:^(id resposeData) {
 
         }];
@@ -42,18 +57,6 @@
 
         }];
     }return _recommandCenter;
-}
--(GZLMainBaseDataModel *)baseModel{
-    if (!_baseModel) {
-        _baseModel = [[GZLMainBaseDataModel alloc]init];
-    }
-    return _baseModel;
-}
--(GZLMainRecommandModel *)recomandModel{
-    if (!_recomandModel) {
-        _recomandModel = [[GZLMainRecommandModel alloc]init];
-    }
-    return _recomandModel;
 }
 
 @end
