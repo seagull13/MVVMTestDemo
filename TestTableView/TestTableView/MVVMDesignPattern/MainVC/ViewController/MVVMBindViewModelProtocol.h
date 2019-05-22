@@ -1,5 +1,5 @@
 //
-//  MVVMBindProtocol.h
+//  MVVMBindViewModelProtocol.h
 //  TestTableView
 //
 //  Created by JiangNanBuYi on 2019/5/22.
@@ -11,8 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol MVVMBindViewModelProtocol <NSObject>
-
-@optional
 -(void)bindViewModel:(id)viewModel;
 @end
 

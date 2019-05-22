@@ -16,7 +16,7 @@
 
 @end
 
-@interface GZLMainView<MVVMBindViewModelProtocol> : UIView
+@interface GZLMainView  : UIView <MVVMBindViewModelProtocol>
 /** 代理 */
 @property (weak, nonatomic)id<GZLMainViewDelegate> delegate;
 @end

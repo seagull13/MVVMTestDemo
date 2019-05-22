@@ -18,6 +18,7 @@ target 'TestTableView' do
   pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
  pod 'Masonry'
   pod 'YYKit'
+pod'SDWebImage'
 
   pod 'ReactiveObjC'
   pod 'AFNetworking', '~> 3.0'

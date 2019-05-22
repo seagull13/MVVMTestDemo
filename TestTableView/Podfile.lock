@@ -16,6 +16,9 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.0)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -25,6 +28,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Masonry
   - ReactiveObjC
+  - SDWebImage
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YYKit
 
@@ -33,6 +37,7 @@ SPEC REPOS:
     - AFNetworking
     - Masonry
     - ReactiveObjC
+    - SDWebImage
     - "UITableView+FDTemplateLayoutCell"
     - YYKit
 
@@ -40,9 +45,10 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: d91d8b069b85cef1d227f519a7933a54f8585018
+PODFILE CHECKSUM: f6f084be30a6948bb85f5d3747fe4e4f0d7c6ea9
 
 COCOAPODS: 1.6.1
