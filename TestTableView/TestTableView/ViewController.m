@@ -32,13 +32,13 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)btnClick{
-    [self presentViewController:[[NSClassFromString(@"DesignPatternVC") alloc]init] animated:YES completion:^{
-
-    }];
-
-//    [self presentViewController:[[NSClassFromString(@"MVVMSimpleVC") alloc]init] animated:YES completion:^{
+//    [self presentViewController:[[NSClassFromString(@"DesignPatternVC") alloc]init] animated:YES completion:^{
 //
 //    }];
+
+    [self presentViewController:[[NSClassFromString(@"GZLMainVC") alloc]init] animated:YES completion:^{
+
+    }];
 }
 
 

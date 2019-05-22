@@ -55,6 +55,37 @@
 		28704BF0223665FC00E6537D /* StatePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BEF223665FC00E6537D /* StatePattern.md */; };
 		28704BF22236660C00E6537D /* TemplatePattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BF12236660B00E6537D /* TemplatePattern.md */; };
 		28704BF42236661400E6537D /* VisitorPattern.md in Resources */ = {isa = PBXBuildFile; fileRef = 28704BF32236661400E6537D /* VisitorPattern.md */; };
+		28C6D62B2293A09500C1BAFC /* GZLNetWorkCacheManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5E92293A09500C1BAFC /* GZLNetWorkCacheManger.m */; };
+		28C6D62C2293A09500C1BAFC /* GZLNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5EB2293A09500C1BAFC /* GZLNetworkService.m */; };
+		28C6D62D2293A09500C1BAFC /* GZLNetWorkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5EE2293A09500C1BAFC /* GZLNetWorkStatus.m */; };
+		28C6D62E2293A09500C1BAFC /* CTLoggerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5F22293A09500C1BAFC /* CTLoggerConfiguration.m */; };
+		28C6D62F2293A09500C1BAFC /* CTNetworkingConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C6D5F32293A09500C1BAFC /* CTNetworkingConfiguration.plist */; };
+		28C6D6302293A09500C1BAFC /* CTNetworkingConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5F42293A09500C1BAFC /* CTNetworkingConfigurationManager.m */; };
+		28C6D6312293A09500C1BAFC /* CTLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5FA2293A09500C1BAFC /* CTLogger.m */; };
+		28C6D6322293A09500C1BAFC /* CTURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5FD2293A09500C1BAFC /* CTURLResponse.m */; };
+		28C6D6332293A09500C1BAFC /* CTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D5FF2293A09500C1BAFC /* CTAPIBaseManager.m */; };
+		28C6D6342293A09500C1BAFC /* iPhoneTypeDefine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C6D6032293A09500C1BAFC /* iPhoneTypeDefine.plist */; };
+		28C6D6352293A09500C1BAFC /* CTApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6062293A09500C1BAFC /* CTApiProxy.m */; };
+		28C6D6362293A09500C1BAFC /* CTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6082293A09500C1BAFC /* CTCache.m */; };
+		28C6D6372293A09500C1BAFC /* CTCachedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6092293A09500C1BAFC /* CTCachedObject.m */; };
+		28C6D6382293A09500C1BAFC /* CTRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D60E2293A09500C1BAFC /* CTRequestGenerator.m */; };
+		28C6D6392293A09500C1BAFC /* CTSignatureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6112293A09500C1BAFC /* CTSignatureGenerator.m */; };
+		28C6D63A2293A09500C1BAFC /* CTCommonParamsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6152293A09500C1BAFC /* CTCommonParamsGenerator.m */; };
+		28C6D63B2293A09500C1BAFC /* NSURLRequest+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D61E2293A09500C1BAFC /* NSURLRequest+CTNetworkingMethods.m */; };
+		28C6D63C2293A09500C1BAFC /* NSObject+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D61F2293A09500C1BAFC /* NSObject+CTNetworkingMethods.m */; };
+		28C6D63D2293A09500C1BAFC /* NSString+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6202293A09500C1BAFC /* NSString+CTNetworkingMethods.m */; };
+		28C6D63E2293A09500C1BAFC /* NSArray+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6212293A09500C1BAFC /* NSArray+CTNetworkingMethods.m */; };
+		28C6D63F2293A09500C1BAFC /* NSDictionary+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6222293A09500C1BAFC /* NSDictionary+CTNetworkingMethods.m */; };
+		28C6D6402293A09500C1BAFC /* NSMutableString+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6232293A09500C1BAFC /* NSMutableString+CTNetworkingMethods.m */; };
+		28C6D6412293A09500C1BAFC /* CTService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6262293A09500C1BAFC /* CTService.m */; };
+		28C6D6422293A09500C1BAFC /* CTServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6272293A09500C1BAFC /* CTServiceFactory.m */; };
+		28C6D6432293A09500C1BAFC /* GZLAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D62A2293A09500C1BAFC /* GZLAPIBaseManager.m */; };
+		28C6D64B2293A13500C1BAFC /* GZLMainVCApiDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D64A2293A13500C1BAFC /* GZLMainVCApiDataCenter.m */; };
+		28C6D64E2293D3C700C1BAFC /* GZLMainVCDataViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D64D2293D3C700C1BAFC /* GZLMainVCDataViewModel.m */; };
+		28C6D6512293D41200C1BAFC /* GZLMainBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6502293D41200C1BAFC /* GZLMainBaseDataModel.m */; };
+		28C6D6542293D44100C1BAFC /* GZLMainRecommandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6532293D44100C1BAFC /* GZLMainRecommandModel.m */; };
+		28C6D6572293D45C00C1BAFC /* GZLMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6562293D45C00C1BAFC /* GZLMainView.m */; };
+		28C6D65A2293D49D00C1BAFC /* GZLMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6592293D49D00C1BAFC /* GZLMainVC.m */; };
 		5406F5F069CEE3A2C9C9929E /* libPods-TestTableViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E848D9F60253E176CCE9EFEB /* libPods-TestTableViewUITests.a */; };
 		5F1CE012DDB6ED8DC010629C /* libPods-TestTableViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7C11DCE36AE952F40E62F /* libPods-TestTableViewTests.a */; };
 		7BD4CCF52254F34600E2BAB3 /* MVVMSimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4CCF42254F34600E2BAB3 /* MVVMSimpleView.m */; };
@@ -158,6 +189,67 @@
 		28704BEF223665FC00E6537D /* StatePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = StatePattern.md; sourceTree = "<group>"; };
 		28704BF12236660B00E6537D /* TemplatePattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TemplatePattern.md; sourceTree = "<group>"; };
 		28704BF32236661400E6537D /* VisitorPattern.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = VisitorPattern.md; sourceTree = "<group>"; };
+		28C6D5E92293A09500C1BAFC /* GZLNetWorkCacheManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLNetWorkCacheManger.m; sourceTree = "<group>"; };
+		28C6D5EA2293A09500C1BAFC /* GZLNetWorkCacheManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLNetWorkCacheManger.h; sourceTree = "<group>"; };
+		28C6D5EB2293A09500C1BAFC /* GZLNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLNetworkService.m; sourceTree = "<group>"; };
+		28C6D5EC2293A09500C1BAFC /* GZLAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLAPIBaseManager.h; sourceTree = "<group>"; };
+		28C6D5EE2293A09500C1BAFC /* GZLNetWorkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLNetWorkStatus.m; sourceTree = "<group>"; };
+		28C6D5EF2293A09500C1BAFC /* GZLNetWorkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLNetWorkStatus.h; sourceTree = "<group>"; };
+		28C6D5F22293A09500C1BAFC /* CTLoggerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLoggerConfiguration.m; sourceTree = "<group>"; };
+		28C6D5F32293A09500C1BAFC /* CTNetworkingConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CTNetworkingConfiguration.plist; sourceTree = "<group>"; };
+		28C6D5F42293A09500C1BAFC /* CTNetworkingConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTNetworkingConfigurationManager.m; sourceTree = "<group>"; };
+		28C6D5F52293A09500C1BAFC /* CTLoggerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLoggerConfiguration.h; sourceTree = "<group>"; };
+		28C6D5F62293A09500C1BAFC /* CTNetworkingConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTNetworkingConfigurationManager.h; sourceTree = "<group>"; };
+		28C6D5F92293A09500C1BAFC /* CTLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLogger.h; sourceTree = "<group>"; };
+		28C6D5FA2293A09500C1BAFC /* CTLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLogger.m; sourceTree = "<group>"; };
+		28C6D5FC2293A09500C1BAFC /* CTURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTURLResponse.h; sourceTree = "<group>"; };
+		28C6D5FD2293A09500C1BAFC /* CTURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTURLResponse.m; sourceTree = "<group>"; };
+		28C6D5FF2293A09500C1BAFC /* CTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAPIBaseManager.m; sourceTree = "<group>"; };
+		28C6D6002293A09500C1BAFC /* CTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAPIBaseManager.h; sourceTree = "<group>"; };
+		28C6D6032293A09500C1BAFC /* iPhoneTypeDefine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iPhoneTypeDefine.plist; sourceTree = "<group>"; };
+		28C6D6052293A09500C1BAFC /* CTApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTApiProxy.h; sourceTree = "<group>"; };
+		28C6D6062293A09500C1BAFC /* CTApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTApiProxy.m; sourceTree = "<group>"; };
+		28C6D6082293A09500C1BAFC /* CTCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCache.m; sourceTree = "<group>"; };
+		28C6D6092293A09500C1BAFC /* CTCachedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCachedObject.m; sourceTree = "<group>"; };
+		28C6D60A2293A09500C1BAFC /* CTCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCache.h; sourceTree = "<group>"; };
+		28C6D60B2293A09500C1BAFC /* CTCachedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCachedObject.h; sourceTree = "<group>"; };
+		28C6D60E2293A09500C1BAFC /* CTRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRequestGenerator.m; sourceTree = "<group>"; };
+		28C6D60F2293A09500C1BAFC /* CTRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRequestGenerator.h; sourceTree = "<group>"; };
+		28C6D6112293A09500C1BAFC /* CTSignatureGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSignatureGenerator.m; sourceTree = "<group>"; };
+		28C6D6122293A09500C1BAFC /* CTSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSignatureGenerator.h; sourceTree = "<group>"; };
+		28C6D6142293A09500C1BAFC /* CTCommonParamsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCommonParamsGenerator.h; sourceTree = "<group>"; };
+		28C6D6152293A09500C1BAFC /* CTCommonParamsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCommonParamsGenerator.m; sourceTree = "<group>"; };
+		28C6D6162293A09500C1BAFC /* CTNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTNetworking.h; sourceTree = "<group>"; };
+		28C6D6182293A09500C1BAFC /* NSObject+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTNetworkingMethods.h"; sourceTree = "<group>"; };
+		28C6D6192293A09500C1BAFC /* NSURLRequest+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+CTNetworkingMethods.h"; sourceTree = "<group>"; };
+		28C6D61A2293A09500C1BAFC /* NSMutableString+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+CTNetworkingMethods.h"; sourceTree = "<group>"; };
+		28C6D61B2293A09500C1BAFC /* NSDictionary+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CTNetworkingMethods.h"; sourceTree = "<group>"; };
+		28C6D61C2293A09500C1BAFC /* NSString+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CTNetworkingMethods.h"; sourceTree = "<group>"; };
+		28C6D61D2293A09500C1BAFC /* NSArray+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CTNetworkingMethods.h"; sourceTree = "<group>"; };
+		28C6D61E2293A09500C1BAFC /* NSURLRequest+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		28C6D61F2293A09500C1BAFC /* NSObject+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		28C6D6202293A09500C1BAFC /* NSString+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		28C6D6212293A09500C1BAFC /* NSArray+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		28C6D6222293A09500C1BAFC /* NSDictionary+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		28C6D6232293A09500C1BAFC /* NSMutableString+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		28C6D6252293A09500C1BAFC /* CTServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServiceFactory.h; sourceTree = "<group>"; };
+		28C6D6262293A09500C1BAFC /* CTService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTService.m; sourceTree = "<group>"; };
+		28C6D6272293A09500C1BAFC /* CTServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTServiceFactory.m; sourceTree = "<group>"; };
+		28C6D6282293A09500C1BAFC /* CTService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTService.h; sourceTree = "<group>"; };
+		28C6D6292293A09500C1BAFC /* GZLNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZLNetworkService.h; sourceTree = "<group>"; };
+		28C6D62A2293A09500C1BAFC /* GZLAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZLAPIBaseManager.m; sourceTree = "<group>"; };
+		28C6D6492293A13500C1BAFC /* GZLMainVCApiDataCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainVCApiDataCenter.h; sourceTree = "<group>"; };
+		28C6D64A2293A13500C1BAFC /* GZLMainVCApiDataCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainVCApiDataCenter.m; sourceTree = "<group>"; };
+		28C6D64C2293D3C700C1BAFC /* GZLMainVCDataViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainVCDataViewModel.h; sourceTree = "<group>"; };
+		28C6D64D2293D3C700C1BAFC /* GZLMainVCDataViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainVCDataViewModel.m; sourceTree = "<group>"; };
+		28C6D64F2293D41200C1BAFC /* GZLMainBaseDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainBaseDataModel.h; sourceTree = "<group>"; };
+		28C6D6502293D41200C1BAFC /* GZLMainBaseDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainBaseDataModel.m; sourceTree = "<group>"; };
+		28C6D6522293D44100C1BAFC /* GZLMainRecommandModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainRecommandModel.h; sourceTree = "<group>"; };
+		28C6D6532293D44100C1BAFC /* GZLMainRecommandModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainRecommandModel.m; sourceTree = "<group>"; };
+		28C6D6552293D45C00C1BAFC /* GZLMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainView.h; sourceTree = "<group>"; };
+		28C6D6562293D45C00C1BAFC /* GZLMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainView.m; sourceTree = "<group>"; };
+		28C6D6582293D49D00C1BAFC /* GZLMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainVC.h; sourceTree = "<group>"; };
+		28C6D6592293D49D00C1BAFC /* GZLMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainVC.m; sourceTree = "<group>"; };
 		3568C3E06766042145A08361 /* Pods-TestTableViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableViewUITests.release.xcconfig"; path = "Target Support Files/Pods-TestTableViewUITests/Pods-TestTableViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		53EB712C898F476A22DEFE3A /* Pods-TestTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableView.debug.xcconfig"; path = "Target Support Files/Pods-TestTableView/Pods-TestTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		740C6B14A8B97A60D1DBCC1F /* libPods-TestTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -589,9 +681,269 @@
 			path = "TestTableView/设计模式/StatePattern";
 			sourceTree = SOURCE_ROOT;
 		};
+		28C6D5E62293A03900C1BAFC /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6452293A0F100C1BAFC /* ApiManger */,
+				28C6D6462293A0F200C1BAFC /* Model */,
+				28C6D6442293A0F100C1BAFC /* View */,
+				28C6D6482293A0F200C1BAFC /* ViewController */,
+				28C6D6472293A0F200C1BAFC /* ViewModel */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		28C6D5E72293A09500C1BAFC /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5E82293A09500C1BAFC /* NetWorkCacheManger */,
+				28C6D5EB2293A09500C1BAFC /* GZLNetworkService.m */,
+				28C6D5EC2293A09500C1BAFC /* GZLAPIBaseManager.h */,
+				28C6D5ED2293A09500C1BAFC /* NetWorkStatus */,
+				28C6D5F02293A09500C1BAFC /* CTNetworking */,
+				28C6D6292293A09500C1BAFC /* GZLNetworkService.h */,
+				28C6D62A2293A09500C1BAFC /* GZLAPIBaseManager.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		28C6D5E82293A09500C1BAFC /* NetWorkCacheManger */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5E92293A09500C1BAFC /* GZLNetWorkCacheManger.m */,
+				28C6D5EA2293A09500C1BAFC /* GZLNetWorkCacheManger.h */,
+			);
+			path = NetWorkCacheManger;
+			sourceTree = "<group>";
+		};
+		28C6D5ED2293A09500C1BAFC /* NetWorkStatus */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5EE2293A09500C1BAFC /* GZLNetWorkStatus.m */,
+				28C6D5EF2293A09500C1BAFC /* GZLNetWorkStatus.h */,
+			);
+			path = NetWorkStatus;
+			sourceTree = "<group>";
+		};
+		28C6D5F02293A09500C1BAFC /* CTNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5F12293A09500C1BAFC /* Configurations */,
+				28C6D5F72293A09500C1BAFC /* Components */,
+				28C6D60C2293A09500C1BAFC /* Generators */,
+				28C6D6162293A09500C1BAFC /* CTNetworking.h */,
+				28C6D6172293A09500C1BAFC /* Categories */,
+				28C6D6242293A09500C1BAFC /* Services */,
+			);
+			path = CTNetworking;
+			sourceTree = "<group>";
+		};
+		28C6D5F12293A09500C1BAFC /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5F22293A09500C1BAFC /* CTLoggerConfiguration.m */,
+				28C6D5F32293A09500C1BAFC /* CTNetworkingConfiguration.plist */,
+				28C6D5F42293A09500C1BAFC /* CTNetworkingConfigurationManager.m */,
+				28C6D5F52293A09500C1BAFC /* CTLoggerConfiguration.h */,
+				28C6D5F62293A09500C1BAFC /* CTNetworkingConfigurationManager.h */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		28C6D5F72293A09500C1BAFC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5F82293A09500C1BAFC /* LogComponents */,
+				28C6D5FB2293A09500C1BAFC /* URLResponse */,
+				28C6D5FE2293A09500C1BAFC /* BaseAPIManager */,
+				28C6D6012293A09500C1BAFC /* Command */,
+				28C6D6022293A09500C1BAFC /* LocationManager */,
+				28C6D6032293A09500C1BAFC /* iPhoneTypeDefine.plist */,
+				28C6D6042293A09500C1BAFC /* APIProxy */,
+				28C6D6072293A09500C1BAFC /* CacheComponents */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		28C6D5F82293A09500C1BAFC /* LogComponents */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5F92293A09500C1BAFC /* CTLogger.h */,
+				28C6D5FA2293A09500C1BAFC /* CTLogger.m */,
+			);
+			path = LogComponents;
+			sourceTree = "<group>";
+		};
+		28C6D5FB2293A09500C1BAFC /* URLResponse */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5FC2293A09500C1BAFC /* CTURLResponse.h */,
+				28C6D5FD2293A09500C1BAFC /* CTURLResponse.m */,
+			);
+			path = URLResponse;
+			sourceTree = "<group>";
+		};
+		28C6D5FE2293A09500C1BAFC /* BaseAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D5FF2293A09500C1BAFC /* CTAPIBaseManager.m */,
+				28C6D6002293A09500C1BAFC /* CTAPIBaseManager.h */,
+			);
+			path = BaseAPIManager;
+			sourceTree = "<group>";
+		};
+		28C6D6012293A09500C1BAFC /* Command */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		28C6D6022293A09500C1BAFC /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		28C6D6042293A09500C1BAFC /* APIProxy */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6052293A09500C1BAFC /* CTApiProxy.h */,
+				28C6D6062293A09500C1BAFC /* CTApiProxy.m */,
+			);
+			path = APIProxy;
+			sourceTree = "<group>";
+		};
+		28C6D6072293A09500C1BAFC /* CacheComponents */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6082293A09500C1BAFC /* CTCache.m */,
+				28C6D6092293A09500C1BAFC /* CTCachedObject.m */,
+				28C6D60A2293A09500C1BAFC /* CTCache.h */,
+				28C6D60B2293A09500C1BAFC /* CTCachedObject.h */,
+			);
+			path = CacheComponents;
+			sourceTree = "<group>";
+		};
+		28C6D60C2293A09500C1BAFC /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D60D2293A09500C1BAFC /* RequestGenerator */,
+				28C6D6102293A09500C1BAFC /* SignatureGenerator */,
+				28C6D6132293A09500C1BAFC /* CommonParamsGenerator */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		28C6D60D2293A09500C1BAFC /* RequestGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D60E2293A09500C1BAFC /* CTRequestGenerator.m */,
+				28C6D60F2293A09500C1BAFC /* CTRequestGenerator.h */,
+			);
+			path = RequestGenerator;
+			sourceTree = "<group>";
+		};
+		28C6D6102293A09500C1BAFC /* SignatureGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6112293A09500C1BAFC /* CTSignatureGenerator.m */,
+				28C6D6122293A09500C1BAFC /* CTSignatureGenerator.h */,
+			);
+			path = SignatureGenerator;
+			sourceTree = "<group>";
+		};
+		28C6D6132293A09500C1BAFC /* CommonParamsGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6142293A09500C1BAFC /* CTCommonParamsGenerator.h */,
+				28C6D6152293A09500C1BAFC /* CTCommonParamsGenerator.m */,
+			);
+			path = CommonParamsGenerator;
+			sourceTree = "<group>";
+		};
+		28C6D6172293A09500C1BAFC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6182293A09500C1BAFC /* NSObject+CTNetworkingMethods.h */,
+				28C6D6192293A09500C1BAFC /* NSURLRequest+CTNetworkingMethods.h */,
+				28C6D61A2293A09500C1BAFC /* NSMutableString+CTNetworkingMethods.h */,
+				28C6D61B2293A09500C1BAFC /* NSDictionary+CTNetworkingMethods.h */,
+				28C6D61C2293A09500C1BAFC /* NSString+CTNetworkingMethods.h */,
+				28C6D61D2293A09500C1BAFC /* NSArray+CTNetworkingMethods.h */,
+				28C6D61E2293A09500C1BAFC /* NSURLRequest+CTNetworkingMethods.m */,
+				28C6D61F2293A09500C1BAFC /* NSObject+CTNetworkingMethods.m */,
+				28C6D6202293A09500C1BAFC /* NSString+CTNetworkingMethods.m */,
+				28C6D6212293A09500C1BAFC /* NSArray+CTNetworkingMethods.m */,
+				28C6D6222293A09500C1BAFC /* NSDictionary+CTNetworkingMethods.m */,
+				28C6D6232293A09500C1BAFC /* NSMutableString+CTNetworkingMethods.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		28C6D6242293A09500C1BAFC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6252293A09500C1BAFC /* CTServiceFactory.h */,
+				28C6D6262293A09500C1BAFC /* CTService.m */,
+				28C6D6272293A09500C1BAFC /* CTServiceFactory.m */,
+				28C6D6282293A09500C1BAFC /* CTService.h */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		28C6D6442293A0F100C1BAFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6552293D45C00C1BAFC /* GZLMainView.h */,
+				28C6D6562293D45C00C1BAFC /* GZLMainView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		28C6D6452293A0F100C1BAFC /* ApiManger */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6492293A13500C1BAFC /* GZLMainVCApiDataCenter.h */,
+				28C6D64A2293A13500C1BAFC /* GZLMainVCApiDataCenter.m */,
+			);
+			path = ApiManger;
+			sourceTree = "<group>";
+		};
+		28C6D6462293A0F200C1BAFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D64F2293D41200C1BAFC /* GZLMainBaseDataModel.h */,
+				28C6D6502293D41200C1BAFC /* GZLMainBaseDataModel.m */,
+				28C6D6522293D44100C1BAFC /* GZLMainRecommandModel.h */,
+				28C6D6532293D44100C1BAFC /* GZLMainRecommandModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		28C6D6472293A0F200C1BAFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D64C2293D3C700C1BAFC /* GZLMainVCDataViewModel.h */,
+				28C6D64D2293D3C700C1BAFC /* GZLMainVCDataViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		28C6D6482293A0F200C1BAFC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28C6D6582293D49D00C1BAFC /* GZLMainVC.h */,
+				28C6D6592293D49D00C1BAFC /* GZLMainVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7BD4CCF22254F32E00E2BAB3 /* MVVMDesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				28C6D5E72293A09500C1BAFC /* NetWork */,
 				7BD4CCF32254F34600E2BAB3 /* MVVMSimpleView.h */,
 				7BD4CCF42254F34600E2BAB3 /* MVVMSimpleView.m */,
 				7BD4CCF62254F3C200E2BAB3 /* MVVMSimpleModel.h */,
@@ -600,6 +952,7 @@
 				7BD4CCFA2254F3D600E2BAB3 /* MVVMSimpleViewModel.m */,
 				7BD4CCFC2254F41200E2BAB3 /* MVVMSimpleVC.h */,
 				7BD4CCFD2254F41200E2BAB3 /* MVVMSimpleVC.m */,
+				28C6D5E62293A03900C1BAFC /* MainVC */,
 			);
 			path = MVVMDesignPattern;
 			sourceTree = "<group>";
@@ -745,6 +1098,7 @@
 				28704BC32236630100E6537D /* Strategypatternmd.md in Resources */,
 				28704BC52236642800E6537D /* FlyweightPattern.md in Resources */,
 				28704BCD2236653500E6537D /* BridgePattern.md in Resources */,
+				28C6D62F2293A09500C1BAFC /* CTNetworkingConfiguration.plist in Resources */,
 				28704BE4223665CA00E6537D /* MediatorPattern.md in Resources */,
 				28704BDC2236659800E6537D /* FacadePattern.md in Resources */,
 				28704BDE223665AB00E6537D /* FactoryPattern.md in Resources */,
@@ -756,6 +1110,7 @@
 				2866D08C2226862600A69E83 /* Main.storyboard in Resources */,
 				28704BCB2236652E00E6537D /* AdapterPattern.md in Resources */,
 				28704BD62236658500E6537D /* CommandPattern.md in Resources */,
+				28C6D6342293A09500C1BAFC /* iPhoneTypeDefine.plist in Resources */,
 				28704BF0223665FC00E6537D /* StatePattern.md in Resources */,
 				28704BD42236657600E6537D /* ChainOfResponsibilityPattern.md in Resources */,
 				28704BD22236655A00E6537D /* BuilderPattern.md in Resources */,
@@ -853,29 +1208,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				2855975D22326ACE007FBC66 /* SmsMsgSend.m in Sources */,
+				28C6D6512293D41200C1BAFC /* GZLMainBaseDataModel.m in Sources */,
 				2866D0C7222686DA00A69E83 /* GZLStandStructureBaseCell.m in Sources */,
+				28C6D6312293A09500C1BAFC /* CTLogger.m in Sources */,
 				7BD4CCF82254F3C200E2BAB3 /* MVVMSimpleModel.m in Sources */,
 				2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */,
 				28704BBD223659DA00E6537D /* ShopReduction.m in Sources */,
+				28C6D62E2293A09500C1BAFC /* CTLoggerConfiguration.m in Sources */,
+				28C6D63C2293A09500C1BAFC /* NSObject+CTNetworkingMethods.m in Sources */,
 				28704BC022365A0E00E6537D /* ShopContext.m in Sources */,
+				28C6D62D2293A09500C1BAFC /* GZLNetWorkStatus.m in Sources */,
+				28C6D6542293D44100C1BAFC /* GZLMainRecommandModel.m in Sources */,
 				2866D0C6222686DA00A69E83 /* GZLStandStructureBaseHeadAndFootView.m in Sources */,
+				28C6D6572293D45C00C1BAFC /* GZLMainView.m in Sources */,
 				7BD4CCF52254F34600E2BAB3 /* MVVMSimpleView.m in Sources */,
 				2866D0C8222686DA00A69E83 /* GZLStandStructureBaseCellModel.m in Sources */,
+				28C6D63D2293A09500C1BAFC /* NSString+CTNetworkingMethods.m in Sources */,
 				28704BB22236405400E6537D /* DesignPatternVC.m in Sources */,
+				28C6D6422293A09500C1BAFC /* CTServiceFactory.m in Sources */,
+				28C6D62C2293A09500C1BAFC /* GZLNetworkService.m in Sources */,
+				28C6D63B2293A09500C1BAFC /* NSURLRequest+CTNetworkingMethods.m in Sources */,
+				28C6D65A2293D49D00C1BAFC /* GZLMainVC.m in Sources */,
+				28C6D64E2293D3C700C1BAFC /* GZLMainVCDataViewModel.m in Sources */,
+				28C6D6412293A09500C1BAFC /* CTService.m in Sources */,
+				28C6D64B2293A13500C1BAFC /* GZLMainVCApiDataCenter.m in Sources */,
+				28C6D6382293A09500C1BAFC /* CTRequestGenerator.m in Sources */,
 				285597512232637C007FBC66 /* MailMsgSend.m in Sources */,
 				2866D0892226862600A69E83 /* ViewController.m in Sources */,
+				28C6D6402293A09500C1BAFC /* NSMutableString+CTNetworkingMethods.m in Sources */,
+				28C6D63E2293A09500C1BAFC /* NSArray+CTNetworkingMethods.m in Sources */,
 				7BD4CCFE2254F41200E2BAB3 /* MVVMSimpleVC.m in Sources */,
+				28C6D6302293A09500C1BAFC /* CTNetworkingConfigurationManager.m in Sources */,
 				2801D731228D699A00417EFB /* TextExampleCell.m in Sources */,
+				28C6D63F2293A09500C1BAFC /* NSDictionary+CTNetworkingMethods.m in Sources */,
 				28704BB72236594000E6537D /* ShopOriginal.m in Sources */,
+				28C6D6432293A09500C1BAFC /* GZLAPIBaseManager.m in Sources */,
+				28C6D6372293A09500C1BAFC /* CTCachedObject.m in Sources */,
+				28C6D6332293A09500C1BAFC /* CTAPIBaseManager.m in Sources */,
 				2866D0C9222686DA00A69E83 /* GZLStandStructureBaseView.m in Sources */,
+				28C6D6322293A09500C1BAFC /* CTURLResponse.m in Sources */,
+				28C6D6392293A09500C1BAFC /* CTSignatureGenerator.m in Sources */,
 				7BD4CCFB2254F3D600E2BAB3 /* MVVMSimpleViewModel.m in Sources */,
 				2866D0942226862900A69E83 /* main.m in Sources */,
 				2855976022326B7D007FBC66 /* PushMsgSend.m in Sources */,
 				2855975A22326636007FBC66 /* MsgSendFactory.m in Sources */,
+				28C6D6362293A09500C1BAFC /* CTCache.m in Sources */,
 				28704BBA223659A200E6537D /* ShopDiscount.m in Sources */,
 				2866D0862226862600A69E83 /* AppDelegate.m in Sources */,
 				2866D0CF22268B4F00A69E83 /* TextStandCellModel.m in Sources */,
+				28C6D6352293A09500C1BAFC /* CTApiProxy.m in Sources */,
+				28C6D62B2293A09500C1BAFC /* GZLNetWorkCacheManger.m in Sources */,
 				2855974E223260B6007FBC66 /* MsgSend.m in Sources */,
+				28C6D63A2293A09500C1BAFC /* CTCommonParamsGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,7 @@
     /*绑定关系*/
     //viewModel绑定model
     MVVMSimpleViewModel *simpleViewModel = [[MVVMSimpleViewModel alloc]init];
-    [simpleViewModel bindModel:model];
+    [simpleViewModel  bindModel:model];
     //view绑定viewModel
     [self.simpleView bindViewModel:simpleViewModel];
     // Do any additional setup after loading the view.

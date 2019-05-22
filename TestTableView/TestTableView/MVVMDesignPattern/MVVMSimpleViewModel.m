@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) MVVMSimpleModel *model;
 
-@property (nonatomic, assign) BOOL            isClick;
 
 @end
 
@@ -20,6 +19,7 @@
 -(void)bindModel:(id)model{
     self.model = model;
     self.nameString = self.model.name;
+    self.desString = self.model.name;
     
 }
 -(void)changeButtonTextAction{
@@ -54,7 +54,7 @@
         self.model.name = @"欧大侠";
     }
     self.model.name = name;
-    self.nameString = self.model.name;
+    self.desString = [self.desString stringByAppendingString:name];
 }
 
 @end

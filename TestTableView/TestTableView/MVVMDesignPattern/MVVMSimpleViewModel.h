@@ -11,12 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MVVMSimpleViewModel : NSObject
 /***  名字 */
 @property(nonatomic,strong)NSString  *nameString;
+/***  名字 */
+@property(nonatomic,strong)NSString  *desString;
+
+@property (nonatomic, assign) BOOL            isClick;
 //绑定model
 - (void)bindModel:(id)model;
-
 //按钮点击方法的实现
 - (void)changeButtonTextAction;
-
 @end
 
 NS_ASSUME_NONNULL_END
