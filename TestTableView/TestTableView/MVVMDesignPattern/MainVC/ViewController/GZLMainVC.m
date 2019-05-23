@@ -63,8 +63,8 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     [self.mainView bindViewModel:self.mainViewModel];
 }
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self dismissViewControllerAnimated:YES completion:nil];
+-(void)click{
+ [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - 代理
@@ -81,7 +81,7 @@
     if (!_mainView) {
         _mainView = [[GZLMainView alloc]init];
         [self.view addSubview:_mainView];
-        [_mainView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(touchesBegan:withEvent:)]];
+        [_mainView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click)]];
         [_mainView bindViewModel:self.mainViewModel];
     }return _mainView;
 }

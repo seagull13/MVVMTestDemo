@@ -9,7 +9,7 @@
 #import "GZLMainView.h"
 #import "Masonry.h"
 #import "GZLMainVCDataViewModel.h"
-
+#import "MainVCViewType.h"
 @interface GZLMainView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 /***ViewModel  */
 @property(nonatomic,strong) GZLMainVCDataViewModel *viewModel;
@@ -17,13 +17,6 @@
 @property(nonatomic,strong)UICollectionView  *mainCollectionView;
 @end
 
-typedef NS_ENUM(NSUInteger, MainViewType) {
-    MainViewTypeAD = 0,
-    MainViewTypeTravel = 1,
-    MainViewTypeFreedomTravel,
-    MainViewTypeJD,
-    MainViewTypeVisa,
-};
 
 @implementation GZLMainView
 #pragma mark - 系统方法
@@ -68,7 +61,7 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
 
 #pragma mark Datasource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return MainViewTypeVisa + 1;
+    return MainViewTypeDecorate + 1;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     NSInteger items = 0;
@@ -78,7 +71,7 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
 //            items = model.rotateAdsVos.count > 0 ? 1 : 0;
             break;
         case MainViewTypeTravel:
-            items = model.homeCatalogList.productGroup.count;
+            items = model.homeCatalogList.productGroup.count ;
             break;
         case MainViewTypeFreedomTravel:
             items = model.homeCatalogList.fixedFreeTravel.count;
@@ -89,7 +82,12 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
         case MainViewTypeVisa:
             items = model.homeCatalogList.ticketVisaCruise.count;
             break;
-
+        case MainViewTypeOther:
+            items = model.advImageFirst.count;
+            break;
+        case MainViewTypeDecorate:
+            items = model.advImageSecond.count;
+            break;
         default:
             break;
     }
@@ -98,22 +96,28 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell<MVVMBindViewModelProtocol> *cell = nil;
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GZLMainHomeCatalogCelll" forIndexPath:indexPath];
-    HomeCatalogList *homeCatalogList = self.viewModel.baseModel.content.homeCatalogList;
+    GZLBaseContenModel *content = self.viewModel.baseModel.content;
     switch (indexPath.section) {
         case MainViewTypeAD:
-
             break;
         case MainViewTypeTravel:
-            [cell bindViewModel:homeCatalogList.productGroup[indexPath.item]];
+            [cell bindViewModel:content.homeCatalogList.productGroup[indexPath.item]];
             break;
         case MainViewTypeFreedomTravel:
-            [cell bindViewModel:homeCatalogList.fixedFreeTravel[indexPath.item]];
+            [cell bindViewModel:content.homeCatalogList.fixedFreeTravel[indexPath.item]];
             break;
         case MainViewTypeJD:
-            [cell bindViewModel:homeCatalogList.hotel[indexPath.item]];
+            [cell bindViewModel:content.homeCatalogList.hotel[indexPath.item]];
             break;
         case MainViewTypeVisa:
-            [cell bindViewModel:homeCatalogList.ticketVisaCruise[indexPath.item]];
+            [cell bindViewModel:content.homeCatalogList.ticketVisaCruise[indexPath.item]];
+            break;
+        case MainViewTypeOther:
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GZLHomeRecommandCell" forIndexPath:indexPath];
+            [cell bindViewModel:content.advImageFirst[indexPath.item]];
+            break;
+        case MainViewTypeDecorate:
+            [cell bindViewModel:content.advImageSecond[indexPath.item]];
             break;
         default:
             break;
@@ -139,6 +143,16 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
         case MainViewTypeVisa:
             itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0), 50);
             break;
+        case MainViewTypeOther:
+            itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12)  / self.viewModel.baseModel.content.advImageFirst.count), 70);
+            break;
+        case MainViewTypeDecorate:
+            if (indexPath.item == 0 || indexPath.item == 3) {
+                itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width)/ 2), floorf(([UIScreen mainScreen].bounds.size.width)/ 2));
+            }else{
+                itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width)/ 2), 95);
+            }
+            break;
         default:
             break;
     }
@@ -154,11 +168,16 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
     if (section == MainViewTypeJD ||  section == MainViewTypeTravel) {
         return CGSizeMake(0, 4);
+    }else  if (section == MainViewTypeVisa) {
+        return CGSizeMake(0, 4);
     }
     return CGSizeMake(0, 2);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    if (section == MainViewTypeDecorate) {
+        return UIEdgeInsetsZero;
+    }
     return UIEdgeInsetsMake(0, 6, 0, 6);
 }
 /**
@@ -167,12 +186,17 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 #pragma mark - X间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    if (section == MainViewTypeDecorate) {
+        return 0;
+    }
     return 0.5;
 }
 #pragma mark - Y间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     if (section == MainViewTypeTravel) {
-        return 0.5;
+        return 1;
+    }else if (section == MainViewTypeDecorate) {
+        return 0;
     }
     return 0;
 }
@@ -186,7 +210,7 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
         _mainCollectionView.backgroundColor = UIColor.whiteColor;
         _mainCollectionView.delegate = self;
         _mainCollectionView.dataSource = self;
-        NSArray *dataModelArray = @[@"GZLMainHomeCatalogCelll",];
+        NSArray *dataModelArray = @[@"GZLMainHomeCatalogCelll",@"GZLHomeRecommandCell"];
         for (NSString *cellClassName in dataModelArray) {
             [_mainCollectionView registerClass:NSClassFromString(cellClassName) forCellWithReuseIdentifier:cellClassName];
         }

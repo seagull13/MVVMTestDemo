@@ -1,20 +1,24 @@
 //
-//  GZLMainHomeCatalogCelll.m
+//  GZLHomeRecommandCell.m
 //  TestTableView
 //
-//  Created by JiangNanBuYi on 2019/5/22.
+//  Created by JiangNanBuYi on 2019/5/23.
 // Copyright © 2017年 moxuyou. All rights reserved.
 //
 
-#import "GZLMainHomeCatalogCelll.h"
+#import "GZLHomeRecommandCell.h"
 #import <Masonry/Masonry.h>
 #import <SDWebImage.h>
 #import "GZLMainBaseDataModel.h"
-@interface GZLMainHomeCatalogCelll()
+#import "Masonry.h"
+@interface GZLHomeRecommandCell()
 /** *  */
 @property(nonatomic,strong)UIImageView  *catalogImageV;
+/** *  */
+@property(nonatomic,strong)UILabel     *textLabel;
+
 @end
-@implementation GZLMainHomeCatalogCelll
+@implementation GZLHomeRecommandCell
 
 #pragma mark - 系统方法
 - (instancetype)init
@@ -47,10 +51,18 @@
 
 #pragma mark - 初始化
 - (void)cellLayout{
-//    self.backgroundColor =  UIColor.lightGrayColor;
+
     [self.catalogImageV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.bottom.mas_equalTo(self);
+        make.centerX.mas_equalTo(self);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+        make.top.mas_equalTo(5);
     }];
+
+    [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.catalogImageV.mas_bottom).mas_offset(3);
+        make.centerX.mas_equalTo(self.contentView);
+    }];
+
 }
 
 -(void)bindViewModel:(id)viewModel{
@@ -65,6 +77,7 @@
             self.catalogImageV.image = image;
             [self.catalogImageV sizeToFit];
         }];
+        self.textLabel.text = model.title;
     }
 }
 #pragma mark - Action
@@ -79,4 +92,13 @@
     return _catalogImageV;
 }
 
+-(UILabel *)textLabel{
+    if(!_textLabel){
+        _textLabel = [[UILabel alloc]init];
+        _textLabel.font = [UIFont systemFontOfSize:14];
+        _textLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:_textLabel];
+    }
+    return _textLabel;
+}
 @end

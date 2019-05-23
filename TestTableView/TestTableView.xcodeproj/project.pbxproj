@@ -88,6 +88,7 @@
 		28C6D65A2293D49D00C1BAFC /* GZLMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C6D6592293D49D00C1BAFC /* GZLMainVC.m */; };
 		28D3A0B0229536FF0026F4E1 /* GZLMainHomeCatalogCelll.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3A0AF229536FF0026F4E1 /* GZLMainHomeCatalogCelll.m */; };
 		28D3A0B4229543500026F4E1 /* GZLMainVCFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3A0B3229543500026F4E1 /* GZLMainVCFlowLayout.m */; };
+		28E1937A22967E1700DB9E50 /* GZLHomeRecommandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E1937922967E1700DB9E50 /* GZLHomeRecommandCell.m */; };
 		5406F5F069CEE3A2C9C9929E /* libPods-TestTableViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E848D9F60253E176CCE9EFEB /* libPods-TestTableViewUITests.a */; };
 		5F1CE012DDB6ED8DC010629C /* libPods-TestTableViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7C11DCE36AE952F40E62F /* libPods-TestTableViewTests.a */; };
 		7BD4CCF52254F34600E2BAB3 /* MVVMSimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4CCF42254F34600E2BAB3 /* MVVMSimpleView.m */; };
@@ -257,6 +258,9 @@
 		28D3A0B12295389A0026F4E1 /* MVVMBindViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMBindViewModelProtocol.h; sourceTree = "<group>"; };
 		28D3A0B2229543500026F4E1 /* GZLMainVCFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLMainVCFlowLayout.h; sourceTree = "<group>"; };
 		28D3A0B3229543500026F4E1 /* GZLMainVCFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLMainVCFlowLayout.m; sourceTree = "<group>"; };
+		28E1937722967CF600DB9E50 /* MainVCViewType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainVCViewType.h; sourceTree = "<group>"; };
+		28E1937822967E1700DB9E50 /* GZLHomeRecommandCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZLHomeRecommandCell.h; sourceTree = "<group>"; };
+		28E1937922967E1700DB9E50 /* GZLHomeRecommandCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZLHomeRecommandCell.m; sourceTree = "<group>"; };
 		3568C3E06766042145A08361 /* Pods-TestTableViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableViewUITests.release.xcconfig"; path = "Target Support Files/Pods-TestTableViewUITests/Pods-TestTableViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		53EB712C898F476A22DEFE3A /* Pods-TestTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableView.debug.xcconfig"; path = "Target Support Files/Pods-TestTableView/Pods-TestTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		740C6B14A8B97A60D1DBCC1F /* libPods-TestTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -907,6 +911,8 @@
 				28C6D6562293D45C00C1BAFC /* GZLMainView.m */,
 				28D3A0AE229536FF0026F4E1 /* GZLMainHomeCatalogCelll.h */,
 				28D3A0AF229536FF0026F4E1 /* GZLMainHomeCatalogCelll.m */,
+				28E1937822967E1700DB9E50 /* GZLHomeRecommandCell.h */,
+				28E1937922967E1700DB9E50 /* GZLHomeRecommandCell.m */,
 				28D3A0B2229543500026F4E1 /* GZLMainVCFlowLayout.h */,
 				28D3A0B3229543500026F4E1 /* GZLMainVCFlowLayout.m */,
 			);
@@ -948,6 +954,7 @@
 				28C6D6582293D49D00C1BAFC /* GZLMainVC.h */,
 				28C6D6592293D49D00C1BAFC /* GZLMainVC.m */,
 				28D3A0B12295389A0026F4E1 /* MVVMBindViewModelProtocol.h */,
+				28E1937722967CF600DB9E50 /* MainVCViewType.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1224,6 +1231,7 @@
 				2866D0C7222686DA00A69E83 /* GZLStandStructureBaseCell.m in Sources */,
 				28C6D6312293A09500C1BAFC /* CTLogger.m in Sources */,
 				7BD4CCF82254F3C200E2BAB3 /* MVVMSimpleModel.m in Sources */,
+				28E1937A22967E1700DB9E50 /* GZLHomeRecommandCell.m in Sources */,
 				2866D0CC22268AF200A69E83 /* TextStandCell.m in Sources */,
 				28704BBD223659DA00E6537D /* ShopReduction.m in Sources */,
 				28C6D62E2293A09500C1BAFC /* CTLoggerConfiguration.m in Sources */,

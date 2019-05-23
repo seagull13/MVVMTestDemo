@@ -7,8 +7,34 @@
 //
 
 #import "GZLMainVCFlowLayout.h"
+#import "MainVCViewType.h"
+
+
+@interface GZLMainVCFlowLayout ()
+
+@property (strong, nonatomic)NSMutableDictionary *maxDic;
+@property (strong, nonatomic)NSMutableArray *attributesArray;
+@property(nonatomic,assign)UIEdgeInsets contentInset;
+
+/***space  */
+@property(nonatomic,assign) CGFloat space;
+
+@end
 
 @implementation GZLMainVCFlowLayout
+
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        self.maxDic = [NSMutableDictionary dictionary];
+//        //第一列和第二列的起始高度都为0
+//        [self.maxDic setObject:@(0) forKey:@"maxO"];
+//        [self.maxDic setObject:@(0) forKey:@"maxS"];
+//        _contentInset = UIEdgeInsetsMake(0, 0, 0, 0);//边距
+//    }
+//    return self;
+//}
 /**
  *  用来做布局的初始化
  *  注意: 一定要调用 [super prepareLayout]
@@ -20,12 +46,21 @@
     self.sectionInset = UIEdgeInsetsMake(0, 6, 0, 6);
     //设置滚动方向
     self.scrollDirection = UICollectionViewScrollDirectionVertical;
-}
-/**
- *这个方法返回值是一个数组(数组内存放着rect范围内所有元素的布局属性,即*UICollectionViewLayoutAttributes对象)
- * 这个方法的返回值,决定了所有rect范围内所有元素的排布
- */
+//    self.attributesArray = [NSMutableArray array];
+    self.space =  [self.collectionView numberOfItemsInSection:MainViewTypeTravel] > 0 ? 52 : 0;
 
+    for (int index = 0; index < [self.collectionView numberOfSections]; index++) {
+        for (int i = 0; i < [self.collectionView numberOfItemsInSection:index]; ++i) {
+            UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:index]];
+            [self.attributesArray addObject:attributes];
+        }
+    }
+}
+///**
+// *这个方法返回值是一个数组(数组内存放着rect范围内所有元素的布局属性,即*UICollectionViewLayoutAttributes对象)
+// * 这个方法的返回值,决定了所有rect范围内所有元素的排布
+// */
+//
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
     //获得super已经计算好的属性
     NSArray *orignal = [super layoutAttributesForElementsInRect:rect];
@@ -35,15 +70,17 @@
     }];
     return array;
 }
+
 -(UICollectionViewLayoutAttributes *)resetFrame:(UICollectionViewLayoutAttributes *)obj{
     CGFloat leftSpace = 6;
     CGFloat lineSpace = 1;
     CGFloat tempHeight = 50;
+    CGFloat tempW = floorf(([UIScreen mainScreen].bounds.size.width)  / 2.0);
     CGFloat W = floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0);
     CGFloat H = 50;
     CGFloat Y = 0;
     CGFloat X = 6;
-    if (obj.indexPath.section ==  1) {
+    if (obj.indexPath.section ==  MainViewTypeTravel) {
         if (obj.indexPath.row == 0) {
             H = tempHeight * 2 + lineSpace;
             X = leftSpace;
@@ -66,8 +103,23 @@
             Y = tempHeight + lineSpace;
         }
         obj.frame = CGRectMake(X, Y, W, H);
-    }else {
-        obj.frame = CGRectMake(obj.frame.origin.x, obj.frame.origin.y - 52, obj.frame.size.width, obj.frame.size.height);
+    }else if (obj.indexPath.section ==  MainViewTypeDecorate){
+        if (obj.indexPath.row == 0) {
+            X = 0;
+            Y = obj.frame.origin.y - self.space;
+        }else if (obj.indexPath.row == 1){
+            X = tempW;
+            Y =  obj.frame.origin.y - self.space - 70 + 24;
+        }else if (obj.indexPath.row == 2){
+            X = 0 ;
+            Y = obj.frame.origin.y - self.space - 70 + 24;
+        }else if (obj.indexPath.row == 3){
+            X = tempW ;
+            Y = obj.frame.origin.y - self.space  - obj.frame.size.height + 95 ;
+        }
+         obj.frame = CGRectMake(X,  Y, obj.frame.size.width, obj.frame.size.height);
+    }else{
+        obj.frame = CGRectMake(obj.frame.origin.x, obj.frame.origin.y - self.space, obj.frame.size.width, obj.frame.size.height);
     }
 
 
@@ -118,4 +170,7 @@
 //    proposedContentOffset.x += minSpace;
     return proposedContentOffset;
 }
+
+
+
 @end
