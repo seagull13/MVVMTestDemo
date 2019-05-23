@@ -47,7 +47,7 @@
 
 #pragma mark - 初始化
 - (void)cellLayout{
-    self.backgroundColor =  UIColor.lightGrayColor;
+//    self.backgroundColor =  UIColor.lightGrayColor;
     [self.catalogImageV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.bottom.mas_equalTo(self);
     }];

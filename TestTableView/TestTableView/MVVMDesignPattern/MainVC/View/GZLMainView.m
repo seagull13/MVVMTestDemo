@@ -129,15 +129,15 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
             break;
         case MainViewTypeTravel:
             if (indexPath.item == 0) {
-                 itemSize = CGSizeMake(ceilf(([UIScreen mainScreen].bounds.size.width  - 12 - 3)  / 3.0), 146);
+                 itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0), 101);
             }else{
-                 itemSize = CGSizeMake(ceilf(([UIScreen mainScreen].bounds.size.width  - 12 - 3)  / 3.0), 70);
+                 itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0), 50);
             }
             break;
         case MainViewTypeFreedomTravel:
         case MainViewTypeJD:
         case MainViewTypeVisa:
-            itemSize = CGSizeMake(ceilf(([UIScreen mainScreen].bounds.size.width  - 12 - 3)  / 3.0), 70);
+            itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0), 50);
             break;
         default:
             break;
@@ -152,12 +152,14 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
 
 #pragma mark - foot宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-
-    return CGSizeMake(0, 3);
+    if (section == MainViewTypeJD ||  section == MainViewTypeTravel) {
+        return CGSizeMake(0, 4);
+    }
+    return CGSizeMake(0, 2);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(3, 6, 0, 6);
+    return UIEdgeInsetsMake(0, 6, 0, 6);
 }
 /**
  这里我用代理设置以下间距 感兴趣可以自己调整值看看差别
@@ -165,19 +167,20 @@ typedef NS_ENUM(NSUInteger, MainViewType) {
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 #pragma mark - X间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 1;
+    return 0.5;
 }
 #pragma mark - Y间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 3;
+    if (section == MainViewTypeTravel) {
+        return 0.5;
+    }
+    return 0;
 }
-
-
 #pragma mark  懒加载
 - (UICollectionView *)mainCollectionView{
 
     if (_mainCollectionView == nil) {
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        UICollectionViewFlowLayout *layout = [[NSClassFromString(@"GZLMainVCFlowLayout") alloc]init];
         layout.scrollDirection  = UICollectionViewScrollDirectionVertical;
         _mainCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
         _mainCollectionView.backgroundColor = UIColor.whiteColor;

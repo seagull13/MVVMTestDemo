@@ -81,6 +81,7 @@
     if (!_mainView) {
         _mainView = [[GZLMainView alloc]init];
         [self.view addSubview:_mainView];
+        [_mainView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(touchesBegan:withEvent:)]];
         [_mainView bindViewModel:self.mainViewModel];
     }return _mainView;
 }

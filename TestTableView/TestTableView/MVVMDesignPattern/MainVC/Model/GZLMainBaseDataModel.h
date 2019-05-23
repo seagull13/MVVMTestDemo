@@ -54,4 +54,5 @@
 @property (nonatomic , strong) GZLBaseContenModel              * content;
 @property (nonatomic , copy) NSString              * fromCache;
 @property (nonatomic , copy) NSString              * resultMsg;
+-(void)dealGZLMainBaseDataModel;
 @end

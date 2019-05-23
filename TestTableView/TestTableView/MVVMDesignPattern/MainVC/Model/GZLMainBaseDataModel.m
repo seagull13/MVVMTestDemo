@@ -25,6 +25,10 @@
              @"fixedFreeTravel" : [Hotel class],
              };
 }
+
+-(void)dealHomeCatalogList{
+
+}
 @end
 
 @implementation GZLBaseContenModel
@@ -36,10 +40,15 @@
              @"homeCatalogList" : [HomeCatalogList class],
              };
 }
+-(void)GZLBaseContenModel{
+
+}
 @end
 @implementation GZLMainBaseDataModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"content" : [GZLBaseContenModel class],
              };
+}
+-(void)dealGZLMainBaseDataModel{
 }
 @end
