@@ -10,7 +10,8 @@
 #import "Masonry.h"
 #import "GZLMainVCDataViewModel.h"
 #import "MainVCViewType.h"
-@interface GZLMainView ()<UICollectionViewDelegate,UICollectionViewDataSource>
+#import "GZLMainVCFlowLayout.h"
+@interface GZLMainView ()<UICollectionViewDelegate,UICollectionViewDataSource,GZLMainVCFlowLayoutDelegate>
 /***ViewModel  */
 @property(nonatomic,strong) GZLMainVCDataViewModel *viewModel;
 /*** collectionView  */
@@ -128,20 +129,22 @@
 #pragma mark - item宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize itemSize = CGSizeZero;
+    CGFloat space = 2;
     switch (indexPath.section) {
         case MainViewTypeAD:
+             itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - space)  / 3.0), 100);
             break;
         case MainViewTypeTravel:
             if (indexPath.item == 0) {
-                 itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0), 101);
+                 itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - space)  / 3.0), 101);
             }else{
-                 itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0), 50);
+                 itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - space)  / 3.0), 50);
             }
             break;
         case MainViewTypeFreedomTravel:
         case MainViewTypeJD:
         case MainViewTypeVisa:
-            itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0), 50);
+            itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12 - space)  / 3.0), 50);
             break;
         case MainViewTypeOther:
             itemSize = CGSizeMake(floorf(([UIScreen mainScreen].bounds.size.width  - 12)  / self.viewModel.baseModel.content.advImageFirst.count), 70);
@@ -180,6 +183,40 @@
     }
     return UIEdgeInsetsMake(0, 6, 0, 6);
 }
+-(CGFloat)waterFlowLayout:(GZLMainVCFlowLayout *)waterFlowLayout indexPath:(NSIndexPath *)indexPath withWidth:(CGFloat)width{
+    return    [self collectionView:self.mainCollectionView layout:waterFlowLayout sizeForItemAtIndexPath:indexPath].height;
+//    CGFloat H = 0;
+//    switch (indexPath.section) {
+//        case MainViewTypeAD:
+//
+//            break;
+//        case MainViewTypeTravel:
+//            if (indexPath.row == 0) {
+//                H = 101;
+//            }else{
+//                H = 50;
+//            }
+//            break;
+//        case MainViewTypeFreedomTravel:
+//        case MainViewTypeJD:
+//        case MainViewTypeVisa:
+//            H = 50;
+//            break;
+//        case MainViewTypeOther:
+//            H = 70;
+//            break;
+//        case MainViewTypeDecorate:
+//            if (indexPath.item == 0 || indexPath.item == 3) {
+//                H = floorf(([UIScreen mainScreen].bounds.size.width)/ 2);
+//            }else{
+//                H = 95;
+//            }
+//            break;
+//        default:
+//            break;
+//    }
+//    return H;
+}
 /**
  这里我用代理设置以下间距 感兴趣可以自己调整值看看差别
  */
@@ -204,7 +241,8 @@
 - (UICollectionView *)mainCollectionView{
 
     if (_mainCollectionView == nil) {
-        UICollectionViewFlowLayout *layout = [[NSClassFromString(@"GZLMainVCFlowLayout") alloc]init];
+        GZLMainVCFlowLayout *layout = [[NSClassFromString(@"GZLMainVCFlowLayout") alloc]init];
+        layout.delegate = self;
         layout.scrollDirection  = UICollectionViewScrollDirectionVertical;
         _mainCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
         _mainCollectionView.backgroundColor = UIColor.whiteColor;

@@ -20,7 +20,6 @@
 #pragma mark - 系统方法
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setupBaseUI];
     [self.mainView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(self.view);
@@ -29,20 +28,19 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    
 }
+
+
+
 - (void)dealloc{
     [self removeMVVMObserve];
     NSLog(@"%s", __func__);
@@ -66,7 +64,6 @@
 -(void)click{
  [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 #pragma mark - 代理
 #pragma mark -
 #pragma mark - Action
@@ -76,7 +73,6 @@
         _mainViewModel = [[GZLMainVCDataViewModel alloc]init];
     }return _mainViewModel;
 }
-
 -(GZLMainView *)mainView{
     if (!_mainView) {
         _mainView = [[GZLMainView alloc]init];

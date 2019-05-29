@@ -40,6 +40,9 @@
 
     }];
 }
+-(void)injection{
+    self.view.backgroundColor = UIColor.redColor;
+}
 
 
 

@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GZLMainVCFlowLayout;
+// 设置代理
+@protocol GZLMainVCFlowLayoutDelegate<NSObject>
+@required
 
+- (CGFloat)waterFlowLayout:(GZLMainVCFlowLayout *)waterFlowLayout indexPath:(NSIndexPath *)indexPath withWidth:(CGFloat)width;
+
+@end
 @interface GZLMainVCFlowLayout : UICollectionViewFlowLayout
 
-/**  */
+// 设置代理，用于从外界拿到高度
+@property(nonatomic,weak) id<GZLMainVCFlowLayoutDelegate> delegate;
 
 
 @end

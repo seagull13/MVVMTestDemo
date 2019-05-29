@@ -65,61 +65,68 @@
     //获得super已经计算好的属性
     NSArray *orignal = [super layoutAttributesForElementsInRect:rect];
     NSArray *array = [[NSArray alloc] initWithArray:orignal copyItems:YES];
+    NSMutableArray *layoutAttributes = [NSMutableArray array];
+    __block  UICollectionViewLayoutAttributes *layout = nil;
     [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj = [self resetFrame:obj];
+        if (layoutAttributes.count > 0) {
+            layout = layoutAttributes.lastObject;
+        }
+        obj = [self resetFrame:obj WithLaseLayout:layout];
+        [layoutAttributes addObject:obj];
     }];
-    return array;
+    return layoutAttributes;
 }
 
--(UICollectionViewLayoutAttributes *)resetFrame:(UICollectionViewLayoutAttributes *)obj{
+-(UICollectionViewLayoutAttributes *)resetFrame:(UICollectionViewLayoutAttributes *)obj WithLaseLayout:(UICollectionViewLayoutAttributes *)lastLayout{
     CGFloat leftSpace = 6;
     CGFloat lineSpace = 1;
-    CGFloat tempHeight = 50;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat tempW = floorf(([UIScreen mainScreen].bounds.size.width)  / 2.0);
-    CGFloat W = floorf(([UIScreen mainScreen].bounds.size.width  - 12 - 2)  / 3.0);
-    CGFloat H = 50;
     CGFloat Y = 0;
     CGFloat X = 6;
-    if (obj.indexPath.section ==  MainViewTypeTravel) {
+    CGPoint lastLayoutOrigin =  lastLayout.frame.origin;
+    CGSize lastLayoutItemSize =  lastLayout.frame.size;
+    CGPoint origin =  obj.frame.origin;
+    CGSize itemSize =  obj.frame.size;
+    if (obj.indexPath.section ==  MainViewTypeAD) {
+        X = leftSpace;
+        Y = 100;
+        obj.frame = CGRectMake(X, Y, itemSize.width, itemSize.height);
+    }else if (obj.indexPath.section ==  MainViewTypeTravel) {
         if (obj.indexPath.row == 0) {
-            H = tempHeight * 2 + lineSpace;
             X = leftSpace;
-            Y = 0;
+            Y = lastLayoutOrigin.y + lastLayoutItemSize.height;
         }else if (obj.indexPath.row == 1){
-            H = tempHeight;
-            X = W + lineSpace + leftSpace;
-            Y = 0;
-        }else if (obj.indexPath.row == 3){
-            H = tempHeight;
-            X = 2 * (W + lineSpace) + leftSpace;
-            Y = 0;
+            X = lastLayoutOrigin.x + lastLayoutItemSize.width + lineSpace;
+            Y = lastLayoutOrigin.y;
         }else if (obj.indexPath.row == 2){
-            H = tempHeight;
-            X = W + lineSpace + leftSpace;
-            Y = tempHeight + lineSpace;
+            X = lastLayoutOrigin.x + lastLayoutItemSize.width + lineSpace;
+            Y = lastLayoutOrigin.y;
+        }else if (obj.indexPath.row == 3){
+            X =  lastLayoutItemSize.width  + lineSpace  + leftSpace;
+            Y = lastLayoutItemSize.height + lastLayoutOrigin.y + lineSpace;
         }else if (obj.indexPath.row == 4){
-            H = tempHeight;
-            X = 2 * (W + lineSpace) + leftSpace;
-            Y = tempHeight + lineSpace;
+            X = lastLayoutOrigin.x + lastLayoutItemSize.width + lineSpace * 1 ;
+            Y = lastLayoutOrigin.y ;
         }
-        obj.frame = CGRectMake(X, Y, W, H);
+        obj.frame = CGRectMake(X, Y, itemSize.width, itemSize.height);
     }else if (obj.indexPath.section ==  MainViewTypeDecorate){
         if (obj.indexPath.row == 0) {
             X = 0;
-            Y = obj.frame.origin.y - self.space;
+            Y = origin.y - self.space;
         }else if (obj.indexPath.row == 1){
             X = tempW;
-            Y =  obj.frame.origin.y - self.space - 70 + 24;
+            Y =  lastLayoutOrigin.y;
         }else if (obj.indexPath.row == 2){
             X = 0 ;
-            Y = obj.frame.origin.y - self.space - 70 + 24;
+            Y = lastLayoutOrigin.y + ceilf(screenWidth) /2;
         }else if (obj.indexPath.row == 3){
             X = tempW ;
-            Y = obj.frame.origin.y - self.space  - obj.frame.size.height + 95 ;
+            Y = lastLayoutOrigin.y  - ceilf(screenWidth) /2 + 95;
         }
-         obj.frame = CGRectMake(X,  Y, obj.frame.size.width, obj.frame.size.height);
+         obj.frame = CGRectMake(X,  Y, itemSize.width, itemSize.height);
     }else{
-        obj.frame = CGRectMake(obj.frame.origin.x, obj.frame.origin.y - self.space, obj.frame.size.width, obj.frame.size.height);
+        obj.frame = CGRectMake(origin.x, origin.y - self.space, itemSize.width,itemSize.height);
     }
 
 
@@ -136,41 +143,229 @@
 {
     return YES;
 }
-/**
- *  这个方法的返回值,决定了contentView停止滚动时的偏移量
- *  参数:
- *  proposedContentOffset 原本情况下,collctionView停止滚动时最终的偏移量
- *  velocity:滚动速率,通过这个参数可以了解滚动的方向
- */
-- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
-{
-//    //计算出最终显示的矩形框
-//    CGRect rect ;
-//    rect.origin.x = proposedContentOffset.x;
-//    rect.origin.y = 0;
-//    rect.size = self.collectionView.frame.size;
+
+-(NSMutableDictionary *)maxDic{
+    if (!_maxDic) {
+        _maxDic = [NSMutableDictionary dictionary];
+        [_maxDic setObject:@(0) forKey:@"maxX"];
+        [_maxDic setObject:@(0) forKey:@"maxY"];
+    }return _maxDic;
+}
+
+@end
+
+//@interface GZLMainVCFlowLayout ()
+//// 添加成员变量
+//{
+//    // 用来设置水平间距
+//    CGFloat _horizontalMargin ;
+//    // 用来设置竖直间距
+//    CGFloat _verticalMargin ;
+//    // 最大的列数
+//    NSInteger _maxColumns ;
+//    // 每个item的四边剧
+//    UIEdgeInsets _insets;
 //
-//    //获得super已经计算好的属性
-//    NSArray *array = [super layoutAttributesForElementsInRect:rect];
+//}
+//// 加入相关属性
+//// 保存每一列的高度
+//@property (strong, nonatomic) NSMutableArray *perColumnMaxHeights;
+//// 保存所有元素的相关属性
+//@property (strong, nonatomic) NSMutableArray *layoutAtts;
+//// 保存所有元素的相关属性
+//@property (assign, nonatomic) BOOL isChangeColumn;
 //
-//    //计算CollectionView 最中心点x 的值
-//    CGFloat centerX = proposedContentOffset.x + self.collectionView.frame.size.width/2;
+//@end
 //
-//    //存放最小的间距
-//    CGFloat minSpace = MAXFLOAT;
-//    for (UICollectionViewLayoutAttributes *attr in array) {
+//@implementation GZLMainVCFlowLayout
 //
-//        if (ABS(minSpace) > ABS(attr.center.x - centerX)) {
+//- (instancetype)init
+//{
+//    if (self = [super init]) {
 //
-//            minSpace = attr.center.x - centerX;
+//        // 当外界没有数据则按初始化数据执行
+//        _maxColumns = 3;
+//        _horizontalMargin = 1;
+//        _verticalMargin = 1;
+//
+//        _insets = UIEdgeInsetsMake(0, 6, 0, 6);
+//    }
+//
+//    return self;
+//
+//}
+//
+//- (NSMutableArray *)layoutAtts
+//{
+//    if (!_layoutAtts) {
+//        _layoutAtts = [NSMutableArray array];
+//    }
+//
+//    return _layoutAtts;
+//}
+//
+//- (NSMutableArray *)perColumnMaxHeights
+//{
+//    if (!_perColumnMaxHeights) {
+//        _perColumnMaxHeights = [NSMutableArray array];
+//
+//    }
+//
+//    return _perColumnMaxHeights;
+//
+//}
+//
+//// 因为在 “layoutAttributesForElementsInRect”可能调用多次，计算多次， 而导致每次的随机数，都不一样， 而造成覆盖现象
+//// 所以在 预布局中处理， 可以只计算一次
+//- (void)prepareLayout
+//{
+//    [self.perColumnMaxHeights removeAllObjects];
+//    [self.layoutAtts removeAllObjects];
+//    self.perColumnMaxHeights = [NSMutableArray arrayWithCapacity:10];
+//    for (int i = 0; i < _maxColumns; i ++) {
+//        [self.perColumnMaxHeights addObject:@(_insets.top)];
+//    }
+//
+////    // 初始化数组高度,因为第一行,不需要按照高度大小添加
+//    CGFloat W = (self.collectionView.frame.size.width - _insets.left - _insets.right - (_maxColumns - 1) * _horizontalMargin ) / _maxColumns;
+//    CGFloat H = 0.0 ;
+//    CGFloat X,Y;
+//    UICollectionViewLayoutAttributes *lastLayoutAtt = nil;
+//    for (int i = 0; i < [self.collectionView numberOfSections]; ++i) {
+//        if (i == MainViewTypeTravel || i == MainViewTypeFreedomTravel || i == MainViewTypeJD || i == MainViewTypeVisa) {
+//            _maxColumns = 3;
+//            _horizontalMargin = 1;
+//            _verticalMargin = 1;
+//            _insets = UIEdgeInsetsMake(0, 6, 0, 6);
+//            W = (self.collectionView.frame.size.width - _insets.left - _insets.right - (_maxColumns - 1) * _horizontalMargin ) / _maxColumns;
+//            self.isChangeColumn = YES;
+//        }else if (i == MainViewTypeOther ) {
+//            _maxColumns = 4;
+//            _horizontalMargin = 0;
+//            _verticalMargin = 0;
+//            _insets = UIEdgeInsetsMake(0, 6, 0, 6);
+//            W = (self.collectionView.frame.size.width - _insets.left - _insets.right - (_maxColumns - 1) * _horizontalMargin ) / _maxColumns;
+//            self.isChangeColumn = YES;
+//        }else{
+//            _maxColumns = 2;
+//            _horizontalMargin = 0;
+//            _verticalMargin = 0;
+//            _insets = UIEdgeInsetsMake(0, 0, 0, 0);
+//            W = (self.collectionView.frame.size.width - _insets.left - _insets.right - (_maxColumns - 1) * _horizontalMargin ) / _maxColumns;
+//            self.isChangeColumn = YES;
+//        }
+//        if (self.isChangeColumn) {
+//            [self.perColumnMaxHeights enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                obj =  @(lastLayoutAtt.frame.origin.y + lastLayoutAtt.frame.size.height);
+//            }];
+//        }
+//        for (int j = 0; j < [self.collectionView numberOfItemsInSection:i]; ++j) {
+//            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:j inSection:i];
+//            UICollectionViewLayoutAttributes *layoutAtt = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+//
+//            // 求出高度最小的列， 计算出 Y值
+//            Y = [self.perColumnMaxHeights[[self minColumn]] floatValue]+ _verticalMargin;
+//            // 计算出 X 值
+//            X = _insets.left +[self minColumn] * (W + _horizontalMargin) ;
+//            // 通过代理计算出 高度
+//            if ([self.delegate respondsToSelector:@selector(waterFlowLayout:indexPath:withWidth:)]) {
+//                H = [self.delegate waterFlowLayout:self indexPath:indexPath withWidth:W];
+//            }
+//            // 将新算出来的高度，替换 原来数组中对应的最低高度位置
+//              [self.perColumnMaxHeights replaceObjectAtIndex:[self minColumn] withObject:@(Y + H)];
+//
+//            layoutAtt.frame = CGRectMake(X, Y, W, H);
+//            lastLayoutAtt = layoutAtt;
+//            [self.layoutAtts addObject:layoutAtt];
+//        }
+//         self.isChangeColumn = NO;
+//    }
+//}
+//
+//- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
+//{
+//
+//    return self.layoutAtts;
+//}
+//
+//// 计算最小高度的列
+//- (NSInteger)minColumn
+//{
+//    NSInteger minColumn = 0;
+//
+//    CGFloat minHeight = [self.perColumnMaxHeights[0] floatValue];
+//
+//    for (int i = 1; i < self.perColumnMaxHeights.count; i ++) {
+//
+//        CGFloat height = [self.perColumnMaxHeights[i] floatValue];
+//        if (height < minHeight) {
+//            minHeight = height;
+//            minColumn = i;
 //        }
 //    }
 //
-//    //修改原有的偏移量
-//    proposedContentOffset.x += minSpace;
-    return proposedContentOffset;
-}
-
-
-
-@end
+//    return minColumn;
+//}
+//
+//// 计算最大高度的列 ，（用在设置 contensize）
+//- (NSInteger)maxColumn
+//{
+//    NSInteger maxColumn = 0;
+//
+//    CGFloat maxHeight = [self.perColumnMaxHeights[0] floatValue];
+//
+//    for (int i = 1; i < self.perColumnMaxHeights.count; i ++) {
+//
+//        CGFloat height = [self.perColumnMaxHeights[i] floatValue];
+//        if (height > maxHeight) {
+//            maxHeight = height;
+//            maxColumn = i;
+//        }
+//    }
+//
+//    return maxColumn;
+//}
+//
+//
+//- (CGSize)collectionViewContentSize
+//{
+//
+//
+//    if (self.perColumnMaxHeights.count == 0) {
+//
+//        return CGSizeZero;
+//    }
+//
+//    return CGSizeMake(self.collectionView.bounds.size.width,  [self.perColumnMaxHeights[[self maxColumn]] floatValue] + _insets.bottom);
+//
+//
+//}
+//
+//- (void)setHorzontalMargin:(CGFloat)horizontalMargin
+//{
+//    _horizontalMargin = horizontalMargin;
+//
+//}
+//- (void)setVerticalMargin:(CGFloat)verticalMargin
+//{
+//
+//    _verticalMargin = verticalMargin;
+//
+//}
+//
+//- (void)setMaxColumns:(NSInteger)maxColumns
+//{
+//
+//    if (maxColumns == 0) {
+//        return;
+//    }
+//    _maxColumns = maxColumns;
+//
+//}
+//-(void)setInserts:(UIEdgeInsets)inserts
+//{
+//    _insets = inserts;
+//
+//}
+//
+//@end
